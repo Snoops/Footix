@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01676B0CAE58BBE0ACE6155797DE67DB /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD70037E012B53135C50D91E52FE6F1 /* Attachment.swift */; };
+		119EEC5474EA13846DFC900F106261B7 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB6105ED201F714508DED4D6469900A /* Types.swift */; };
+		120C2DCCF380AD3A115ECE8A2480010E /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2F2841EE68BD71EA8F6B99C92B8B0 /* NetworkInterface.swift */; };
+		153E49B9D2F5263250CE4C4D8397AC93 /* EventDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4147797094D5DE9A059D7BEA35DB7B3A /* EventDispatcher.swift */; };
+		19658902A8517F567B4D3C50D2432DAF /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0DD12836D5C691E483FFEA00939DEEF /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2ABF1AC14F285814B97F2DE58E13A854 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706CE7DD4B29C1DFD0CCE47393F6AB3E /* Starscream.framework */; };
+		2F5DC6C6BFC528EE73AAE91136C5D9B4 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A33BEB4653434835053440660F7F7E /* Team.swift */; };
+		3F285E029E2F6DE634C6923D4E83E6CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A1001487F4A1D85BC035B896950E7E /* User.swift */; };
+		418C2BA30DD87B15178E1C8078572A23 /* SlackKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9249440C28704C302AEB431D08C9CB6B /* SlackKit-dummy.m */; };
+		48DF7D6E471C218C97985C854D2F67E4 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505240219D5B99F43A98ED3E11CE57A4 /* WebSocket.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4ECAE8901FF7E21A2A50FA39EC45E537 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08D7FDE89DD33DF5C24BEE4367AF60 /* Cocoa.framework */; };
+		50B2F7714CF55EA513591622CFB50726 /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68A30041A64C118A92FD0EC148A2665 /* EventHandler.swift */; };
+		51EF35D35BCC62C973E71F2E214B0D2A /* Pods-FootixSlack-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B7E7D92087857933DF69F6343E55314 /* Pods-FootixSlack-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54C227BD17A6F7B181B09DA6FBF2DB60 /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD06B55976DF7453D396306E447BE29 /* Starscream-dummy.m */; };
+		65EC29C57DDCD66F817C256E1118EFCD /* Pods-FootixSlack-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C8CAF89394CC44721D15D161236E7 /* Pods-FootixSlack-dummy.m */; };
+		7FC674B51170F5179235862B5FC92C46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39EA141B5C48C2093290F2209794716 /* Foundation.framework */; };
+		87D97BF3B36217CA9EF14D6913A1D287 /* SlackWebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CE5B5E09C3783BA2176C026F1FD67 /* SlackWebAPI.swift */; };
+		8EE7606B00279D71753DB5B73934BF53 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08D7FDE89DD33DF5C24BEE4367AF60 /* Cocoa.framework */; };
+		96B8AC6469D2D0741B8E70218EFB8168 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A09833D784A2DF7A3BF5D26313D2D3D /* Event.swift */; };
+		981F9D7605D50F4085B1C1C6B04D1851 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A72C368947B90EE706D36D99A06BE0 /* Channel.swift */; };
+		989D94515A3773ED2AF050CF15D84F9F /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013970CC673172569CFB3BB5F10FFB87 /* File.swift */; };
+		A6D12BD7C600C4D1D701DFA74D8BD91C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD08D7FDE89DD33DF5C24BEE4367AF60 /* Cocoa.framework */; };
+		ADB3F9F67F8DE6C248EDB9B1B2A00CD8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29C2CCFC281C9B18E05A90C9D3C1110 /* Message.swift */; };
+		BDC9C78965F4CC5830D379DF8BE5EC87 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C58925344E1B327C1D00F1712E970EF /* SSLSecurity.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CA38EF2728619DD4CE7A2D24BB44BBFB /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FD3FCEEA9161E2881FF5C19F133072 /* Client.swift */; };
+		D125C31E37B97F4B9D20A94B665EE20C /* SlackKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B64E2426B865047CB3800CDC555D4A6B /* SlackKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D402F65C3235269C6CAE0CAD63AD4037 /* UserGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62903FF7E7CC969C3A475ABA19CCE975 /* UserGroup.swift */; };
+		D588B0D77D82393EEA3239464397A6E7 /* EventDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13171ACE996126A779F542A916DCDCA9 /* EventDelegate.swift */; };
+		EB0F39DCF42BAABB721AC957016FB6B2 /* SlackWebAPIErrorDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160E6190D94E80E1DE360485DC2D5CAF /* SlackWebAPIErrorDispatcher.swift */; };
+		ED5687619DCAD2209F1AFCBBC5AB3E1E /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDA9ECA243C3E820204C0904CCA537D /* Bot.swift */; };
+		F1BE3285B7AE98180BFF0C8F2FBE9E54 /* ClientExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288DDB8E0E03865FAE800DA1C2F39EEE /* ClientExtensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E403B5C9241C3A0D8CA568EC9707F63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73C458C0094FEF493F7F8723CE0D732C;
+			remoteInfo = SlackKit;
+		};
+		8B6CF872B8959C4D1EDD38F425B6A64D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1716A7BA4D857B0485AEAB42AB6FA7BE;
+			remoteInfo = Starscream;
+		};
+		A782D36B2426A648D824D0CDF6F70806 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1716A7BA4D857B0485AEAB42AB6FA7BE;
+			remoteInfo = Starscream;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		013970CC673172569CFB3BB5F10FFB87 /* File.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = File.swift; path = SlackKit/Sources/File.swift; sourceTree = "<group>"; };
+		0CA3AD8C8401360CCB186036BB805424 /* Pods-FootixSlack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FootixSlack.release.xcconfig"; sourceTree = "<group>"; };
+		10FD3FCEEA9161E2881FF5C19F133072 /* Client.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Client.swift; path = SlackKit/Sources/Client.swift; sourceTree = "<group>"; };
+		121F066A53BCD91D4EAFA5343EE0075D /* SlackKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlackKit-prefix.pch"; sourceTree = "<group>"; };
+		13171ACE996126A779F542A916DCDCA9 /* EventDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventDelegate.swift; path = SlackKit/Sources/EventDelegate.swift; sourceTree = "<group>"; };
+		160E6190D94E80E1DE360485DC2D5CAF /* SlackWebAPIErrorDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlackWebAPIErrorDispatcher.swift; path = SlackKit/Sources/SlackWebAPIErrorDispatcher.swift; sourceTree = "<group>"; };
+		19A72C368947B90EE706D36D99A06BE0 /* Channel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = SlackKit/Sources/Channel.swift; sourceTree = "<group>"; };
+		205242A713298CD8DBFB0654F28516AB /* Pods-FootixSlack-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FootixSlack-acknowledgements.plist"; sourceTree = "<group>"; };
+		2053F585D47592CE14478C25E7BAA840 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23701D57D4DB427B0D9535732F29CFA0 /* Pods-FootixSlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FootixSlack.debug.xcconfig"; sourceTree = "<group>"; };
+		27FFB0B423AF26050EC8AA22ADFE1964 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		288DDB8E0E03865FAE800DA1C2F39EEE /* ClientExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClientExtensions.swift; path = SlackKit/Sources/ClientExtensions.swift; sourceTree = "<group>"; };
+		32A1001487F4A1D85BC035B896950E7E /* User.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = User.swift; path = SlackKit/Sources/User.swift; sourceTree = "<group>"; };
+		3C58925344E1B327C1D00F1712E970EF /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SSLSecurity.swift; sourceTree = "<group>"; };
+		3DB6105ED201F714508DED4D6469900A /* Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Types.swift; path = SlackKit/Sources/Types.swift; sourceTree = "<group>"; };
+		4147797094D5DE9A059D7BEA35DB7B3A /* EventDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventDispatcher.swift; path = SlackKit/Sources/EventDispatcher.swift; sourceTree = "<group>"; };
+		4B920F136895777D15FEE08265226153 /* Pods-FootixSlack-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FootixSlack-acknowledgements.markdown"; sourceTree = "<group>"; };
+		50077AEDFBB8752A7821E065D6D3E3B0 /* SlackKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SlackKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		505240219D5B99F43A98ED3E11CE57A4 /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		50C7FE49B3037F2308F6F6251AD9DC4D /* SlackKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SlackKit.xcconfig; sourceTree = "<group>"; };
+		58B352685B2F23A0D472A28AC6A97AC7 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B944B6DD96DDB06547C9D981AC1003D /* SlackKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SlackKit.modulemap; sourceTree = "<group>"; };
+		5CDA9ECA243C3E820204C0904CCA537D /* Bot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bot.swift; path = SlackKit/Sources/Bot.swift; sourceTree = "<group>"; };
+		625858B53E0628C5E59ED2EAFA98E4DC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62903FF7E7CC969C3A475ABA19CCE975 /* UserGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserGroup.swift; path = SlackKit/Sources/UserGroup.swift; sourceTree = "<group>"; };
+		69634338F31C9B93BB568B74E4CCD113 /* Starscream.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.xcconfig; sourceTree = "<group>"; };
+		6A09833D784A2DF7A3BF5D26313D2D3D /* Event.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Event.swift; path = SlackKit/Sources/Event.swift; sourceTree = "<group>"; };
+		706CE7DD4B29C1DFD0CCE47393F6AB3E /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		736DCCDF7D46AD840C5E9488BE2B63EF /* Starscream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-prefix.pch"; sourceTree = "<group>"; };
+		7B7E7D92087857933DF69F6343E55314 /* Pods-FootixSlack-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FootixSlack-umbrella.h"; sourceTree = "<group>"; };
+		7E3C8CAF89394CC44721D15D161236E7 /* Pods-FootixSlack-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FootixSlack-dummy.m"; sourceTree = "<group>"; };
+		8DD06B55976DF7453D396306E447BE29 /* Starscream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Starscream-dummy.m"; sourceTree = "<group>"; };
+		9249440C28704C302AEB431D08C9CB6B /* SlackKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SlackKit-dummy.m"; sourceTree = "<group>"; };
+		94B711DC52D6B4E1754DCDAAF99BB04C /* Pods-FootixSlack-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FootixSlack-resources.sh"; sourceTree = "<group>"; };
+		97A33BEB4653434835053440660F7F7E /* Team.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Team.swift; path = SlackKit/Sources/Team.swift; sourceTree = "<group>"; };
+		9CC2F2841EE68BD71EA8F6B99C92B8B0 /* NetworkInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkInterface.swift; path = SlackKit/Sources/NetworkInterface.swift; sourceTree = "<group>"; };
+		B39EA141B5C48C2093290F2209794716 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B64E2426B865047CB3800CDC555D4A6B /* SlackKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlackKit-umbrella.h"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C29C2CCFC281C9B18E05A90C9D3C1110 /* Message.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Message.swift; path = SlackKit/Sources/Message.swift; sourceTree = "<group>"; };
+		C68A30041A64C118A92FD0EC148A2665 /* EventHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventHandler.swift; path = SlackKit/Sources/EventHandler.swift; sourceTree = "<group>"; };
+		CE0A679CC48BD710FAB51AD494E411AB /* Pods_FootixSlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootixSlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAD70037E012B53135C50D91E52FE6F1 /* Attachment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Attachment.swift; path = SlackKit/Sources/Attachment.swift; sourceTree = "<group>"; };
+		EC49E68963782237330780AE991F243E /* Starscream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Starscream.modulemap; sourceTree = "<group>"; };
+		ED8F913E9B49521E2678738D9D207536 /* Pods-FootixSlack.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FootixSlack.modulemap"; sourceTree = "<group>"; };
+		F0DD12836D5C691E483FFEA00939DEEF /* Starscream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-umbrella.h"; sourceTree = "<group>"; };
+		F15CE5B5E09C3783BA2176C026F1FD67 /* SlackWebAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlackWebAPI.swift; path = SlackKit/Sources/SlackWebAPI.swift; sourceTree = "<group>"; };
+		F617693F2A0709154993567E1D98266C /* Pods-FootixSlack-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FootixSlack-frameworks.sh"; sourceTree = "<group>"; };
+		FD08D7FDE89DD33DF5C24BEE4367AF60 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E5FB0CDFAEA5692A19941451C98B838 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ECAE8901FF7E21A2A50FA39EC45E537 /* Cocoa.framework in Frameworks */,
+				7FC674B51170F5179235862B5FC92C46 /* Foundation.framework in Frameworks */,
+				2ABF1AC14F285814B97F2DE58E13A854 /* Starscream.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FCE2055DBA87EB973ED9E0A9DDB2B68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6D12BD7C600C4D1D701DFA74D8BD91C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6CC7CDE4CEA0B65EEBD8CE733A871D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EE7606B00279D71753DB5B73934BF53 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EEC7D7C0160B3CEB0DA2E1EC581CC98 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2053F585D47592CE14478C25E7BAA840 /* Info.plist */,
+				5B944B6DD96DDB06547C9D981AC1003D /* SlackKit.modulemap */,
+				50C7FE49B3037F2308F6F6251AD9DC4D /* SlackKit.xcconfig */,
+				9249440C28704C302AEB431D08C9CB6B /* SlackKit-dummy.m */,
+				121F066A53BCD91D4EAFA5343EE0075D /* SlackKit-prefix.pch */,
+				B64E2426B865047CB3800CDC555D4A6B /* SlackKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SlackKit";
+			sourceTree = "<group>";
+		};
+		3B09FA2BC8A52B153B30840FAA8CF7DB /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				FD08D7FDE89DD33DF5C24BEE4367AF60 /* Cocoa.framework */,
+				B39EA141B5C48C2093290F2209794716 /* Foundation.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		3DC725E831CE55768B405138B357807B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				706CE7DD4B29C1DFD0CCE47393F6AB3E /* Starscream.framework */,
+				3B09FA2BC8A52B153B30840FAA8CF7DB /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40122FECE5EC7DDE289EC7D1F201509D /* Starscream */ = {
+			isa = PBXGroup;
+			children = (
+				3C58925344E1B327C1D00F1712E970EF /* SSLSecurity.swift */,
+				505240219D5B99F43A98ED3E11CE57A4 /* WebSocket.swift */,
+				A66B08020A1A121184062A23F4463B70 /* Support Files */,
+			);
+			path = Starscream;
+			sourceTree = "<group>";
+		};
+		4D3555A0C3E96A6E7AD1860DECEF23A5 /* Pods-FootixSlack */ = {
+			isa = PBXGroup;
+			children = (
+				27FFB0B423AF26050EC8AA22ADFE1964 /* Info.plist */,
+				ED8F913E9B49521E2678738D9D207536 /* Pods-FootixSlack.modulemap */,
+				4B920F136895777D15FEE08265226153 /* Pods-FootixSlack-acknowledgements.markdown */,
+				205242A713298CD8DBFB0654F28516AB /* Pods-FootixSlack-acknowledgements.plist */,
+				7E3C8CAF89394CC44721D15D161236E7 /* Pods-FootixSlack-dummy.m */,
+				F617693F2A0709154993567E1D98266C /* Pods-FootixSlack-frameworks.sh */,
+				94B711DC52D6B4E1754DCDAAF99BB04C /* Pods-FootixSlack-resources.sh */,
+				7B7E7D92087857933DF69F6343E55314 /* Pods-FootixSlack-umbrella.h */,
+				23701D57D4DB427B0D9535732F29CFA0 /* Pods-FootixSlack.debug.xcconfig */,
+				0CA3AD8C8401360CCB186036BB805424 /* Pods-FootixSlack.release.xcconfig */,
+			);
+			name = "Pods-FootixSlack";
+			path = "Target Support Files/Pods-FootixSlack";
+			sourceTree = "<group>";
+		};
+		57312917B20A21B16659ABE0C6DFDDDB /* SlackKit */ = {
+			isa = PBXGroup;
+			children = (
+				EAD70037E012B53135C50D91E52FE6F1 /* Attachment.swift */,
+				5CDA9ECA243C3E820204C0904CCA537D /* Bot.swift */,
+				19A72C368947B90EE706D36D99A06BE0 /* Channel.swift */,
+				10FD3FCEEA9161E2881FF5C19F133072 /* Client.swift */,
+				288DDB8E0E03865FAE800DA1C2F39EEE /* ClientExtensions.swift */,
+				6A09833D784A2DF7A3BF5D26313D2D3D /* Event.swift */,
+				13171ACE996126A779F542A916DCDCA9 /* EventDelegate.swift */,
+				4147797094D5DE9A059D7BEA35DB7B3A /* EventDispatcher.swift */,
+				C68A30041A64C118A92FD0EC148A2665 /* EventHandler.swift */,
+				013970CC673172569CFB3BB5F10FFB87 /* File.swift */,
+				C29C2CCFC281C9B18E05A90C9D3C1110 /* Message.swift */,
+				9CC2F2841EE68BD71EA8F6B99C92B8B0 /* NetworkInterface.swift */,
+				F15CE5B5E09C3783BA2176C026F1FD67 /* SlackWebAPI.swift */,
+				160E6190D94E80E1DE360485DC2D5CAF /* SlackWebAPIErrorDispatcher.swift */,
+				97A33BEB4653434835053440660F7F7E /* Team.swift */,
+				3DB6105ED201F714508DED4D6469900A /* Types.swift */,
+				32A1001487F4A1D85BC035B896950E7E /* User.swift */,
+				62903FF7E7CC969C3A475ABA19CCE975 /* UserGroup.swift */,
+				0EEC7D7C0160B3CEB0DA2E1EC581CC98 /* Support Files */,
+			);
+			path = SlackKit;
+			sourceTree = "<group>";
+		};
+		6EAA1B69AF23243A4993FC44DFB95877 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D3555A0C3E96A6E7AD1860DECEF23A5 /* Pods-FootixSlack */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		70359B36233542837A56EF1B4C259750 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE0A679CC48BD710FAB51AD494E411AB /* Pods_FootixSlack.framework */,
+				50077AEDFBB8752A7821E065D6D3E3B0 /* SlackKit.framework */,
+				58B352685B2F23A0D472A28AC6A97AC7 /* Starscream.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				3DC725E831CE55768B405138B357807B /* Frameworks */,
+				AFEAB8FAEE9CDCE70463E3E45FC2BD9A /* Pods */,
+				70359B36233542837A56EF1B4C259750 /* Products */,
+				6EAA1B69AF23243A4993FC44DFB95877 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A66B08020A1A121184062A23F4463B70 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				625858B53E0628C5E59ED2EAFA98E4DC /* Info.plist */,
+				EC49E68963782237330780AE991F243E /* Starscream.modulemap */,
+				69634338F31C9B93BB568B74E4CCD113 /* Starscream.xcconfig */,
+				8DD06B55976DF7453D396306E447BE29 /* Starscream-dummy.m */,
+				736DCCDF7D46AD840C5E9488BE2B63EF /* Starscream-prefix.pch */,
+				F0DD12836D5C691E483FFEA00939DEEF /* Starscream-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Starscream";
+			sourceTree = "<group>";
+		};
+		AFEAB8FAEE9CDCE70463E3E45FC2BD9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57312917B20A21B16659ABE0C6DFDDDB /* SlackKit */,
+				40122FECE5EC7DDE289EC7D1F201509D /* Starscream */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3FA3572CF48AA3CB4DA45C53EEF5CFC1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51EF35D35BCC62C973E71F2E214B0D2A /* Pods-FootixSlack-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		493DD880FDA5CB12BA184339E623DD5A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19658902A8517F567B4D3C50D2432DAF /* Starscream-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D238FA2E5282309FA52DC99948B24E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D125C31E37B97F4B9D20A94B665EE20C /* SlackKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1716A7BA4D857B0485AEAB42AB6FA7BE /* Starscream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFC08DF98D160889FA28D3965E6D0FD0 /* Build configuration list for PBXNativeTarget "Starscream" */;
+			buildPhases = (
+				BAF18ED5EB5663814383B80F0E88CCAD /* Sources */,
+				A6CC7CDE4CEA0B65EEBD8CE733A871D7 /* Frameworks */,
+				493DD880FDA5CB12BA184339E623DD5A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Starscream;
+			productName = Starscream;
+			productReference = 58B352685B2F23A0D472A28AC6A97AC7 /* Starscream.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		73C458C0094FEF493F7F8723CE0D732C /* SlackKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 406F3D954194ADDDA08160D638B912A7 /* Build configuration list for PBXNativeTarget "SlackKit" */;
+			buildPhases = (
+				D07D10B387207CDBA9B36555D1399D11 /* Sources */,
+				6E5FB0CDFAEA5692A19941451C98B838 /* Frameworks */,
+				7D238FA2E5282309FA52DC99948B24E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4725319C7808499B48518AFB522F39A /* PBXTargetDependency */,
+			);
+			name = SlackKit;
+			productName = SlackKit;
+			productReference = 50077AEDFBB8752A7821E065D6D3E3B0 /* SlackKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8FC1845C3B9634C903B880D3B19A9DA7 /* Pods-FootixSlack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C062C0F6287CB0C36B89BF45DCA2BB5B /* Build configuration list for PBXNativeTarget "Pods-FootixSlack" */;
+			buildPhases = (
+				473B80EE6720F9C641CFD6399C1FAE3F /* Sources */,
+				9FCE2055DBA87EB973ED9E0A9DDB2B68 /* Frameworks */,
+				3FA3572CF48AA3CB4DA45C53EEF5CFC1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0B9740963686D4A903A7A239AB016EE /* PBXTargetDependency */,
+				DC6BCBCD46938E481B0E436E933B5409 /* PBXTargetDependency */,
+			);
+			name = "Pods-FootixSlack";
+			productName = "Pods-FootixSlack";
+			productReference = CE0A679CC48BD710FAB51AD494E411AB /* Pods_FootixSlack.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 70359B36233542837A56EF1B4C259750 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FC1845C3B9634C903B880D3B19A9DA7 /* Pods-FootixSlack */,
+				73C458C0094FEF493F7F8723CE0D732C /* SlackKit */,
+				1716A7BA4D857B0485AEAB42AB6FA7BE /* Starscream */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		473B80EE6720F9C641CFD6399C1FAE3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65EC29C57DDCD66F817C256E1118EFCD /* Pods-FootixSlack-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAF18ED5EB5663814383B80F0E88CCAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC9C78965F4CC5830D379DF8BE5EC87 /* SSLSecurity.swift in Sources */,
+				54C227BD17A6F7B181B09DA6FBF2DB60 /* Starscream-dummy.m in Sources */,
+				48DF7D6E471C218C97985C854D2F67E4 /* WebSocket.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07D10B387207CDBA9B36555D1399D11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01676B0CAE58BBE0ACE6155797DE67DB /* Attachment.swift in Sources */,
+				ED5687619DCAD2209F1AFCBBC5AB3E1E /* Bot.swift in Sources */,
+				981F9D7605D50F4085B1C1C6B04D1851 /* Channel.swift in Sources */,
+				CA38EF2728619DD4CE7A2D24BB44BBFB /* Client.swift in Sources */,
+				F1BE3285B7AE98180BFF0C8F2FBE9E54 /* ClientExtensions.swift in Sources */,
+				96B8AC6469D2D0741B8E70218EFB8168 /* Event.swift in Sources */,
+				D588B0D77D82393EEA3239464397A6E7 /* EventDelegate.swift in Sources */,
+				153E49B9D2F5263250CE4C4D8397AC93 /* EventDispatcher.swift in Sources */,
+				50B2F7714CF55EA513591622CFB50726 /* EventHandler.swift in Sources */,
+				989D94515A3773ED2AF050CF15D84F9F /* File.swift in Sources */,
+				ADB3F9F67F8DE6C248EDB9B1B2A00CD8 /* Message.swift in Sources */,
+				120C2DCCF380AD3A115ECE8A2480010E /* NetworkInterface.swift in Sources */,
+				418C2BA30DD87B15178E1C8078572A23 /* SlackKit-dummy.m in Sources */,
+				87D97BF3B36217CA9EF14D6913A1D287 /* SlackWebAPI.swift in Sources */,
+				EB0F39DCF42BAABB721AC957016FB6B2 /* SlackWebAPIErrorDispatcher.swift in Sources */,
+				2F5DC6C6BFC528EE73AAE91136C5D9B4 /* Team.swift in Sources */,
+				119EEC5474EA13846DFC900F106261B7 /* Types.swift in Sources */,
+				3F285E029E2F6DE634C6923D4E83E6CC /* User.swift in Sources */,
+				D402F65C3235269C6CAE0CAD63AD4037 /* UserGroup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4725319C7808499B48518AFB522F39A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Starscream;
+			target = 1716A7BA4D857B0485AEAB42AB6FA7BE /* Starscream */;
+			targetProxy = 8B6CF872B8959C4D1EDD38F425B6A64D /* PBXContainerItemProxy */;
+		};
+		DC6BCBCD46938E481B0E436E933B5409 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Starscream;
+			target = 1716A7BA4D857B0485AEAB42AB6FA7BE /* Starscream */;
+			targetProxy = A782D36B2426A648D824D0CDF6F70806 /* PBXContainerItemProxy */;
+		};
+		F0B9740963686D4A903A7A239AB016EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SlackKit;
+			target = 73C458C0094FEF493F7F8723CE0D732C /* SlackKit */;
+			targetProxy = 5E403B5C9241C3A0D8CA568EC9707F63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0408A8DE32D3264B1B042203CB6B201B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50C7FE49B3037F2308F6F6251AD9DC4D /* SlackKit.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/SlackKit/SlackKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SlackKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/SlackKit/SlackKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SlackKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		10B2EE21B5D67EE2C819831CCC43832B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7C07D96CC7C445E83983A6C6420BC692 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D7F9B96CC1983F67ABA79F79453B124 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50C7FE49B3037F2308F6F6251AD9DC4D /* SlackKit.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/SlackKit/SlackKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SlackKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/SlackKit/SlackKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SlackKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A5724163AEC5C5A88631CFC2887378B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CA3AD8C8401360CCB186036BB805424 /* Pods-FootixSlack.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-FootixSlack/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/Pods-FootixSlack/Pods-FootixSlack.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_FootixSlack;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AE13642C33DA02D8637A20FF5DB46060 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69634338F31C9B93BB568B74E4CCD113 /* Starscream.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D75A97070A7F83B2658C98C58651E240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69634338F31C9B93BB568B74E4CCD113 /* Starscream.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E9DEB9E608113BA5285F7B21950A25F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23701D57D4DB427B0D9535732F29CFA0 /* Pods-FootixSlack.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-FootixSlack/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/Pods-FootixSlack/Pods-FootixSlack.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_FootixSlack;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B2EE21B5D67EE2C819831CCC43832B /* Debug */,
+				7C07D96CC7C445E83983A6C6420BC692 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		406F3D954194ADDDA08160D638B912A7 /* Build configuration list for PBXNativeTarget "SlackKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0408A8DE32D3264B1B042203CB6B201B /* Debug */,
+				8D7F9B96CC1983F67ABA79F79453B124 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C062C0F6287CB0C36B89BF45DCA2BB5B /* Build configuration list for PBXNativeTarget "Pods-FootixSlack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9DEB9E608113BA5285F7B21950A25F9 /* Debug */,
+				A5724163AEC5C5A88631CFC2887378B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFC08DF98D160889FA28D3965E6D0FD0 /* Build configuration list for PBXNativeTarget "Starscream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D75A97070A7F83B2658C98C58651E240 /* Debug */,
+				AE13642C33DA02D8637A20FF5DB46060 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

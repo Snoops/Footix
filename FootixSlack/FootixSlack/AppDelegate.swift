@@ -7,18 +7,76 @@
 //
 
 import Cocoa
+import SlackKit
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, MessageEventsDelegate, SlackEventsDelegate {
 
-
+    let client = Client(apiToken: "xoxp-15400414497-15401032887-26358697158-7bca0e5840")
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+        
+        client.connect()
+        client.slackEventsDelegate = self
+        client.messageEventsDelegate = self
+        
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
+    }
+    
+    // MARK: - Slack Kit Delegates 
+    
+    func messageReceived(message: Message) {
+        
+        NSLog("Message received")
+        NSLog("     Text = \(message.text!)")
+        NSLog("     User = \(message.username)")
+        NSLog("     User = \(message.channel!)")
+        
+        client.sendMessage("I'm great, thank you!", channelID: (message.channel!))
+        
+    }
+    
+    func messageSent(message: Message) {
+        
+        NSLog("Message sent = \(message.text!)")
+        
+    }
+    
+    func messageChanged(message: Message) {
+        
+        NSLog("Message changed = \(message.text!)")
+        
+    }
+    
+    func messageDeleted(message: Message?) {
+        
+        if let actualMessage = message {
+            NSLog("Message deleted = \(actualMessage.text!)")
+        }
+        
+    }
+    
+    func clientConnected() {
+        
+        NSLog("Client connected")
+        NSLog("     Team               : \((client.team?.name)!)")
+        NSLog("     Authenticated user : \((client.authenticatedUser?.name)!)")
+        
+    }
+    
+    func clientDisconnected() {}
+    func preferenceChanged(preference: String, value: AnyObject) {}
+    func userChanged(user: User) {}
+    func presenceChanged(user: User?, presence: String?) {}
+    func manualPresenceChanged(user: User?, presence: String?) {}
+    
+    func botEvent(bot: Bot) {
+        
+        
     }
 
     // MARK: - Core Data stack

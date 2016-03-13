@@ -1,0 +1,13 @@
+PODS:
+  - SlackKit (0.9.9):
+    - Starscream (~> 1.0.2)
+  - Starscream (1.0.2)
+
+DEPENDENCIES:
+  - SlackKit
+
+SPEC CHECKSUMS:
+  SlackKit: e48f31fd6efe281c4c69f56113b64816e60cb143
+  Starscream: 40e2c4c1c770d811f24116b8b7dbeb4542c56767
+
+COCOAPODS: 0.39.0
