@@ -12,7 +12,7 @@ import SlackKit
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, MessageEventsDelegate, SlackEventsDelegate {
 
-    let client = Client(apiToken: "xoxp-15400414497-15401032887-26358697158-7bca0e5840")
+    let client = Client(apiToken: "xoxb-26175293891-3l4kYku020nxtGQ6DvhyNH1o")
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
@@ -32,9 +32,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, MessageEventsDelegate, Slack
     func messageReceived(message: Message) {
         
         NSLog("Message received")
-        NSLog("     Text = \(message.text!)")
-        NSLog("     User = \(message.username)")
-        NSLog("     User = \(message.channel!)")
+        NSLog("     Text    = \(message.text!)")
+        NSLog("     User    = \(message.user!)")
+        NSLog("     Channel = \(message.channel!)")
+//        NSLog("     Members = \(message.members)")
         
         client.sendMessage("I'm great, thank you!", channelID: (message.channel!))
         
@@ -65,6 +66,17 @@ class AppDelegate: NSObject, NSApplicationDelegate, MessageEventsDelegate, Slack
         NSLog("Client connected")
         NSLog("     Team               : \((client.team?.name)!)")
         NSLog("     Authenticated user : \((client.authenticatedUser?.name)!)")
+        
+        for userDict in client.users as [String : User] {
+            
+//            let user: User = 
+            
+            NSLog("     Bots               : \(userDict)")
+            NSLog("==================================================")
+            
+        }
+        
+        
         
     }
     

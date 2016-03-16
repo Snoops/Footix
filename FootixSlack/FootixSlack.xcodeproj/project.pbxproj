@@ -10,9 +10,10 @@
 		450B0620130B102498D2FB70 /* Pods_FootixSlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE8ABC053B420B4FB6E014B /* Pods_FootixSlack.framework */; };
 		7A65BF9A1C94EDA400872F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BF991C94EDA400872F94 /* AppDelegate.swift */; };
 		7A65BF9C1C94EDA400872F94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BF9B1C94EDA400872F94 /* ViewController.swift */; };
-		7A65BF9F1C94EDA400872F94 /* FootixSlack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BF9D1C94EDA400872F94 /* FootixSlack.xcdatamodeld */; };
 		7A65BFA11C94EDA400872F94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A65BFA01C94EDA400872F94 /* Assets.xcassets */; };
-		7A65BFA41C94EDA400872F94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A65BFA21C94EDA400872F94 /* Main.storyboard */; };
+		7A65BFAD1C9625FD00872F94 /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7A65BFAB1C9625FD00872F94 /* Notes.txt */; };
+		7A65BFB21C96265B00872F94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A65BFB11C96265B00872F94 /* Main.storyboard */; };
+		7A65BFBA1C96286600872F94 /* FootixSlack.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BFB91C96286600872F94 /* FootixSlack.xcdatamodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +21,12 @@
 		3AE8ABC053B420B4FB6E014B /* Pods_FootixSlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootixSlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A65BF961C94EDA400872F94 /* FootixSlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootixSlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A65BF991C94EDA400872F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A65BF9B1C94EDA400872F94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7A65BF9E1C94EDA400872F94 /* FootixSlack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FootixSlack.xcdatamodel; sourceTree = "<group>"; };
+		7A65BF9B1C94EDA400872F94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewControllers/ViewController.swift; sourceTree = "<group>"; };
 		7A65BFA01C94EDA400872F94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7A65BFA31C94EDA400872F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A65BFA51C94EDA400872F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A65BFAB1C9625FD00872F94 /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
+		7A65BFB11C96265B00872F94 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
+		7A65BFB91C96286600872F94 /* FootixSlack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FootixSlack.xcdatamodel; sourceTree = "<group>"; };
 		9E5D9579C365D01C6D0753A4 /* Pods-FootixSlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootixSlack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootixSlack/Pods-FootixSlack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,14 +80,55 @@
 		7A65BF981C94EDA400872F94 /* FootixSlack */ = {
 			isa = PBXGroup;
 			children = (
-				7A65BF991C94EDA400872F94 /* AppDelegate.swift */,
-				7A65BF9B1C94EDA400872F94 /* ViewController.swift */,
-				7A65BFA01C94EDA400872F94 /* Assets.xcassets */,
-				7A65BFA21C94EDA400872F94 /* Main.storyboard */,
 				7A65BFA51C94EDA400872F94 /* Info.plist */,
-				7A65BF9D1C94EDA400872F94 /* FootixSlack.xcdatamodeld */,
+				7A65BFAB1C9625FD00872F94 /* Notes.txt */,
+				7A65BFA01C94EDA400872F94 /* Assets.xcassets */,
+				7A65BFB41C96267F00872F94 /* AppDelegate */,
+				7A65BFB51C96269100872F94 /* Common */,
+				7A65BFB81C9626CD00872F94 /* CoreData */,
+				7A65BFB61C96269A00872F94 /* ViewControllers */,
+				7A65BFB31C96266700872F94 /* Storyboards */,
 			);
 			path = FootixSlack;
+			sourceTree = "<group>";
+		};
+		7A65BFB31C96266700872F94 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7A65BFB11C96265B00872F94 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		7A65BFB41C96267F00872F94 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7A65BF991C94EDA400872F94 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7A65BFB51C96269100872F94 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7A65BFB61C96269A00872F94 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A65BF9B1C94EDA400872F94 /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7A65BFB81C9626CD00872F94 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7A65BFB91C96286600872F94 /* FootixSlack.xcdatamodel */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +192,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A65BFB21C96265B00872F94 /* Main.storyboard in Resources */,
+				7A65BFAD1C9625FD00872F94 /* Notes.txt in Resources */,
 				7A65BFA11C94EDA400872F94 /* Assets.xcassets in Resources */,
-				7A65BFA41C94EDA400872F94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,24 +253,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A65BF9F1C94EDA400872F94 /* FootixSlack.xcdatamodeld in Sources */,
 				7A65BF9C1C94EDA400872F94 /* ViewController.swift in Sources */,
 				7A65BF9A1C94EDA400872F94 /* AppDelegate.swift in Sources */,
+				7A65BFBA1C96286600872F94 /* FootixSlack.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		7A65BFA21C94EDA400872F94 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7A65BFA31C94EDA400872F94 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7A65BFA61C94EDA400872F94 /* Debug */ = {
@@ -357,19 +390,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7A65BF9D1C94EDA400872F94 /* FootixSlack.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7A65BF9E1C94EDA400872F94 /* FootixSlack.xcdatamodel */,
-			);
-			currentVersion = 7A65BF9E1C94EDA400872F94 /* FootixSlack.xcdatamodel */;
-			path = FootixSlack.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7A65BF8E1C94EDA400872F94 /* Project object */;
 }

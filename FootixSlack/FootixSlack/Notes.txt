@@ -1,0 +1,33 @@
+REQUIREMENTS
+
+API Manager
+
+    - Get data from Soccer API
+
+Core Data Manager
+
+    - Save, Retrieve, Modify, Delete data received from API
+
+Message Manager
+
+    - Listen for incoming messages for a given channel
+    - Analyze mentions, reactions etc
+    - Dispatch informations
+    - Send messages
+
+Bot Manager
+
+    - Analyze messages
+    - Get information with keywords from API Manager
+    - Send relevant information to Message manager, who will send them back to slack
+
+
+
+
+
+
+Statistiques
+
+    - Utilisation générale, meilleur utilisateur, utilisateur incompris, ...
+
+
