@@ -17,6 +17,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, MessageEventsDelegate, Slack
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
         
+        NSLog("AppDelegate | applicationDidFinishLaunching()")
+        
         client.connect()
         client.slackEventsDelegate = self
         client.messageEventsDelegate = self

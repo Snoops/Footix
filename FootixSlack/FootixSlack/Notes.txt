@@ -2,11 +2,11 @@ REQUIREMENTS
 
 Managers
 
-    API Manager
+    - API Manager
 
         - Get data from Soccer API
 
-    Core Data Manager
+    - Core Data Manager
 
         - Save, Retrieve, Modify, Delete data received from API
 
@@ -16,6 +16,12 @@ Managers
         - Analyze mentions, reactions etc
         - Dispatch informations
         - Send messages
+
+DataBase
+
+    - Build keywords database
+    - Link keywords with API call
+    - Link keywords with responses
 
 Models
 
@@ -30,4 +36,7 @@ Statistiques
     - Log/save all footix bot conversations for later analyze/debug
     - Utilisation générale, meilleur utilisateur, utilisateur incompris, ...
 
+Extra
 
+    - Provides pronostics based on previous games and previous teams games.     i.e. @footix what do you think of the coming Barça - Bayern game?
+    - Provides user with latest/hotest news with redirect link.                 i.e. @footix what's the latest (soccer) news in France?

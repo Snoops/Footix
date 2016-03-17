@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21EBBF5B1C9AF7DD0054CB05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EBBF5A1C9AF7DD0054CB05 /* AppDelegate.swift */; };
+		21EBBF5D1C9AF7DD0054CB05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EBBF5C1C9AF7DD0054CB05 /* ViewController.swift */; };
+		21EBBF601C9AF7DD0054CB05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EBBF5E1C9AF7DD0054CB05 /* Main.storyboard */; };
+		21EBBF631C9AF7DE0054CB05 /* iOSFootixSlack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21EBBF611C9AF7DE0054CB05 /* iOSFootixSlack.xcdatamodeld */; };
+		21EBBF651C9AF7DE0054CB05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21EBBF641C9AF7DE0054CB05 /* Assets.xcassets */; };
+		21EBBF681C9AF7DE0054CB05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EBBF661C9AF7DE0054CB05 /* LaunchScreen.storyboard */; };
+		21EBBF6E1C9AFCC40054CB05 /* Main_iOS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EBBF6D1C9AFCC40054CB05 /* Main_iOS.storyboard */; };
+		21EBBF6F1C9AFF560054CB05 /* Main_iOS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EBBF6D1C9AFCC40054CB05 /* Main_iOS.storyboard */; };
 		450B0620130B102498D2FB70 /* Pods_FootixSlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE8ABC053B420B4FB6E014B /* Pods_FootixSlack.framework */; };
 		7A65BF9A1C94EDA400872F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BF991C94EDA400872F94 /* AppDelegate.swift */; };
 		7A65BF9C1C94EDA400872F94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BF9B1C94EDA400872F94 /* ViewController.swift */; };
@@ -18,6 +26,15 @@
 
 /* Begin PBXFileReference section */
 		10BC528F6971053304BC40CC /* Pods-FootixSlack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootixSlack.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootixSlack/Pods-FootixSlack.release.xcconfig"; sourceTree = "<group>"; };
+		21EBBF581C9AF7DD0054CB05 /* iOSFootixSlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFootixSlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21EBBF5A1C9AF7DD0054CB05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		21EBBF5C1C9AF7DD0054CB05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		21EBBF5F1C9AF7DD0054CB05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21EBBF621C9AF7DE0054CB05 /* iOSFootixSlack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSFootixSlack.xcdatamodel; sourceTree = "<group>"; };
+		21EBBF641C9AF7DE0054CB05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21EBBF671C9AF7DE0054CB05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		21EBBF691C9AF7DE0054CB05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21EBBF6D1C9AFCC40054CB05 /* Main_iOS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main_iOS.storyboard; path = Storyboards/Main_iOS.storyboard; sourceTree = "<group>"; };
 		3AE8ABC053B420B4FB6E014B /* Pods_FootixSlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootixSlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A65BF961C94EDA400872F94 /* FootixSlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootixSlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A65BF991C94EDA400872F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +48,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		21EBBF551C9AF7DD0054CB05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A65BF931C94EDA400872F94 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,6 +75,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		21EBBF591C9AF7DD0054CB05 /* iOSFootixSlack */ = {
+			isa = PBXGroup;
+			children = (
+				21EBBF5A1C9AF7DD0054CB05 /* AppDelegate.swift */,
+				21EBBF5C1C9AF7DD0054CB05 /* ViewController.swift */,
+				21EBBF5E1C9AF7DD0054CB05 /* Main.storyboard */,
+				21EBBF641C9AF7DE0054CB05 /* Assets.xcassets */,
+				21EBBF661C9AF7DE0054CB05 /* LaunchScreen.storyboard */,
+				21EBBF691C9AF7DE0054CB05 /* Info.plist */,
+				21EBBF611C9AF7DE0054CB05 /* iOSFootixSlack.xcdatamodeld */,
+			);
+			path = iOSFootixSlack;
+			sourceTree = "<group>";
+		};
 		5696DAEE14D703A534425FE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				7A65BF981C94EDA400872F94 /* FootixSlack */,
+				21EBBF591C9AF7DD0054CB05 /* iOSFootixSlack */,
 				7A65BF971C94EDA400872F94 /* Products */,
 				1D5AAB7C3389A9983ABB93A2 /* Pods */,
 				5696DAEE14D703A534425FE9 /* Frameworks */,
@@ -73,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				7A65BF961C94EDA400872F94 /* FootixSlack.app */,
+				21EBBF581C9AF7DD0054CB05 /* iOSFootixSlack.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				7A65BFB11C96265B00872F94 /* Main.storyboard */,
+				21EBBF6D1C9AFCC40054CB05 /* Main_iOS.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -134,6 +175,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		21EBBF571C9AF7DD0054CB05 /* iOSFootixSlack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21EBBF6C1C9AF7DE0054CB05 /* Build configuration list for PBXNativeTarget "iOSFootixSlack" */;
+			buildPhases = (
+				21EBBF541C9AF7DD0054CB05 /* Sources */,
+				21EBBF551C9AF7DD0054CB05 /* Frameworks */,
+				21EBBF561C9AF7DD0054CB05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSFootixSlack;
+			productName = iOSFootixSlack;
+			productReference = 21EBBF581C9AF7DD0054CB05 /* iOSFootixSlack.app */;
+			productType = "com.apple.product-type.application";
+		};
 		7A65BF951C94EDA400872F94 /* FootixSlack */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A65BFA81C94EDA400872F94 /* Build configuration list for PBXNativeTarget "FootixSlack" */;
@@ -164,6 +222,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Footix;
 				TargetAttributes = {
+					21EBBF571C9AF7DD0054CB05 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 					7A65BF951C94EDA400872F94 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -183,16 +244,29 @@
 			projectRoot = "";
 			targets = (
 				7A65BF951C94EDA400872F94 /* FootixSlack */,
+				21EBBF571C9AF7DD0054CB05 /* iOSFootixSlack */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		21EBBF561C9AF7DD0054CB05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21EBBF681C9AF7DE0054CB05 /* LaunchScreen.storyboard in Resources */,
+				21EBBF6F1C9AFF560054CB05 /* Main_iOS.storyboard in Resources */,
+				21EBBF651C9AF7DE0054CB05 /* Assets.xcassets in Resources */,
+				21EBBF601C9AF7DD0054CB05 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A65BF941C94EDA400872F94 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7A65BFB21C96265B00872F94 /* Main.storyboard in Resources */,
+				21EBBF6E1C9AFCC40054CB05 /* Main_iOS.storyboard in Resources */,
 				7A65BFAD1C9625FD00872F94 /* Notes.txt in Resources */,
 				7A65BFA11C94EDA400872F94 /* Assets.xcassets in Resources */,
 			);
@@ -249,6 +323,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		21EBBF541C9AF7DD0054CB05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21EBBF631C9AF7DE0054CB05 /* iOSFootixSlack.xcdatamodeld in Sources */,
+				21EBBF5D1C9AF7DD0054CB05 /* ViewController.swift in Sources */,
+				21EBBF5B1C9AF7DD0054CB05 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A65BF921C94EDA400872F94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,7 +345,59 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		21EBBF5E1C9AF7DD0054CB05 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21EBBF5F1C9AF7DD0054CB05 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		21EBBF661C9AF7DE0054CB05 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21EBBF671C9AF7DE0054CB05 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		21EBBF6A1C9AF7DE0054CB05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = iOSFootixSlack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liquidum.iOSFootixSlack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		21EBBF6B1C9AF7DE0054CB05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = iOSFootixSlack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liquidum.iOSFootixSlack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		7A65BFA61C94EDA400872F94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -298,7 +434,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -336,7 +473,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -350,6 +488,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = FootixSlack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.footix.FootixSlack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -363,6 +502,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = FootixSlack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.footix.FootixSlack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -371,6 +511,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		21EBBF6C1C9AF7DE0054CB05 /* Build configuration list for PBXNativeTarget "iOSFootixSlack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21EBBF6A1C9AF7DE0054CB05 /* Debug */,
+				21EBBF6B1C9AF7DE0054CB05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7A65BF911C94EDA400872F94 /* Build configuration list for PBXProject "FootixSlack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -390,6 +539,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		21EBBF611C9AF7DE0054CB05 /* iOSFootixSlack.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				21EBBF621C9AF7DE0054CB05 /* iOSFootixSlack.xcdatamodel */,
+			);
+			currentVersion = 21EBBF621C9AF7DE0054CB05 /* iOSFootixSlack.xcdatamodel */;
+			path = iOSFootixSlack.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7A65BF8E1C94EDA400872F94 /* Project object */;
 }
