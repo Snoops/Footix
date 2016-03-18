@@ -40,5 +40,6 @@ Statistiques
 
 Extra
 
+    - Add Reminders, show reminders                                             i.e. @footix remind me to watch next OM - PSG. 
     - Provides pronostics based on previous games and previous teams games.     i.e. @footix what do you think of the coming Barça - Bayern game?
     - Provides user with latest/hotest news with redirect link.                 i.e. @footix what's the latest (soccer) news in France?
