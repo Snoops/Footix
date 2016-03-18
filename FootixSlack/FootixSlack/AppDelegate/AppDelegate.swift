@@ -10,87 +10,18 @@ import Cocoa
 import SlackKit
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate, MessageEventsDelegate, SlackEventsDelegate {
-
-    let client = Client(apiToken: "xoxb-26175293891-3l4kYku020nxtGQ6DvhyNH1o")
+class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+        NSLOG("AppDelegate | applicationDidFinishLaunching()")
         
-        NSLog("AppDelegate | applicationDidFinishLaunching()")
-        
-        client.connect()
-        client.slackEventsDelegate = self
-        client.messageEventsDelegate = self
-        
+        // Init FTSlackManager instance
+        FTSlackManager.sharedManager
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
-    }
-    
-    // MARK: - Slack Kit Delegates 
-    
-    func messageReceived(message: Message) {
-        
-        NSLog("Message received")
-        NSLog("     Text    = \(message.text!)")
-        NSLog("     User    = \(message.user!)")
-        NSLog("     Channel = \(message.channel!)")
-//        NSLog("     Members = \(message.members)")
-        
-        client.sendMessage("I'm great, thank you!", channelID: (message.channel!))
-        
-    }
-    
-    func messageSent(message: Message) {
-        
-        NSLog("Message sent = \(message.text!)")
-        
-    }
-    
-    func messageChanged(message: Message) {
-        
-        NSLog("Message changed = \(message.text!)")
-        
-    }
-    
-    func messageDeleted(message: Message?) {
-        
-        if let actualMessage = message {
-            NSLog("Message deleted = \(actualMessage.text!)")
-        }
-        
-    }
-    
-    func clientConnected() {
-        
-        NSLog("Client connected")
-        NSLog("     Team               : \((client.team?.name)!)")
-        NSLog("     Authenticated user : \((client.authenticatedUser?.name)!)")
-        
-        for userDict in client.users as [String : User] {
-            
-//            let user: User = 
-            
-            NSLog("     Bots               : \(userDict)")
-            NSLog("==================================================")
-            
-        }
-        
-        
-        
-    }
-    
-    func clientDisconnected() {}
-    func preferenceChanged(preference: String, value: AnyObject) {}
-    func userChanged(user: User) {}
-    func presenceChanged(user: User?, presence: String?) {}
-    func manualPresenceChanged(user: User?, presence: String?) {}
-    
-    func botEvent(bot: Bot) {
-        
-        
     }
 
     // MARK: - Core Data stack

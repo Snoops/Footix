@@ -14,6 +14,9 @@
 		7A65BFAD1C9625FD00872F94 /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7A65BFAB1C9625FD00872F94 /* Notes.txt */; };
 		7A65BFB21C96265B00872F94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A65BFB11C96265B00872F94 /* Main.storyboard */; };
 		7A65BFBA1C96286600872F94 /* FootixSlack.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BFB91C96286600872F94 /* FootixSlack.xcdatamodel */; };
+		7A65BFC11C9BA1E400872F94 /* FTBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BFC01C9BA1E400872F94 /* FTBot.swift */; };
+		7A65BFC41C9BA33D00872F94 /* FTSlackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BFC31C9BA33D00872F94 /* FTSlackManager.swift */; };
+		7A65BFC61C9BA86300872F94 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BFC51C9BA86300872F94 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		7A65BFAB1C9625FD00872F94 /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		7A65BFB11C96265B00872F94 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
 		7A65BFB91C96286600872F94 /* FootixSlack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FootixSlack.xcdatamodel; sourceTree = "<group>"; };
+		7A65BFC01C9BA1E400872F94 /* FTBot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTBot.swift; sourceTree = "<group>"; };
+		7A65BFC31C9BA33D00872F94 /* FTSlackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTSlackManager.swift; sourceTree = "<group>"; };
+		7A65BFC51C9BA86300872F94 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9E5D9579C365D01C6D0753A4 /* Pods-FootixSlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootixSlack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootixSlack/Pods-FootixSlack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,8 +91,8 @@
 				7A65BFA01C94EDA400872F94 /* Assets.xcassets */,
 				7A65BFB41C96267F00872F94 /* AppDelegate */,
 				7A65BFB51C96269100872F94 /* Common */,
-				7A65BFB81C9626CD00872F94 /* CoreData */,
 				7A65BFB61C96269A00872F94 /* ViewControllers */,
+				7A65BFB81C9626CD00872F94 /* CoreData */,
 				7A65BFB31C96266700872F94 /* Storyboards */,
 			);
 			path = FootixSlack;
@@ -111,6 +117,9 @@
 		7A65BFB51C96269100872F94 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7A65BFC51C9BA86300872F94 /* Constants.swift */,
+				7A65BFC21C9BA28B00872F94 /* SlackManager */,
+				7A65BFBF1C9BA1AB00872F94 /* Bot */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -129,6 +138,22 @@
 				7A65BFB91C96286600872F94 /* FootixSlack.xcdatamodel */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7A65BFBF1C9BA1AB00872F94 /* Bot */ = {
+			isa = PBXGroup;
+			children = (
+				7A65BFC01C9BA1E400872F94 /* FTBot.swift */,
+			);
+			path = Bot;
+			sourceTree = "<group>";
+		};
+		7A65BFC21C9BA28B00872F94 /* SlackManager */ = {
+			isa = PBXGroup;
+			children = (
+				7A65BFC31C9BA33D00872F94 /* FTSlackManager.swift */,
+			);
+			path = SlackManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +185,7 @@
 		7A65BF8E1C94EDA400872F94 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FT;
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Footix;
@@ -254,8 +280,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A65BF9C1C94EDA400872F94 /* ViewController.swift in Sources */,
+				7A65BFC11C9BA1E400872F94 /* FTBot.swift in Sources */,
+				7A65BFC41C9BA33D00872F94 /* FTSlackManager.swift in Sources */,
 				7A65BF9A1C94EDA400872F94 /* AppDelegate.swift in Sources */,
 				7A65BFBA1C96286600872F94 /* FootixSlack.xcdatamodel in Sources */,
+				7A65BFC61C9BA86300872F94 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
