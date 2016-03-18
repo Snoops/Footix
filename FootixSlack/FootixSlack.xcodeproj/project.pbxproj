@@ -18,13 +18,6 @@
 
 /* Begin PBXFileReference section */
 		10BC528F6971053304BC40CC /* Pods-FootixSlack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootixSlack.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootixSlack/Pods-FootixSlack.release.xcconfig"; sourceTree = "<group>"; };
-		21EBBF5A1C9AF7DD0054CB05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		21EBBF5C1C9AF7DD0054CB05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		21EBBF5F1C9AF7DD0054CB05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		21EBBF621C9AF7DE0054CB05 /* iOSFootixSlack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSFootixSlack.xcdatamodel; sourceTree = "<group>"; };
-		21EBBF641C9AF7DE0054CB05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		21EBBF671C9AF7DE0054CB05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		21EBBF691C9AF7DE0054CB05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AE8ABC053B420B4FB6E014B /* Pods_FootixSlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootixSlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A65BF961C94EDA400872F94 /* FootixSlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootixSlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A65BF991C94EDA400872F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,20 +51,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		21EBBF591C9AF7DD0054CB05 /* iOSFootixSlack */ = {
-			isa = PBXGroup;
-			children = (
-				21EBBF5A1C9AF7DD0054CB05 /* AppDelegate.swift */,
-				21EBBF5C1C9AF7DD0054CB05 /* ViewController.swift */,
-				21EBBF5E1C9AF7DD0054CB05 /* Main.storyboard */,
-				21EBBF641C9AF7DE0054CB05 /* Assets.xcassets */,
-				21EBBF661C9AF7DE0054CB05 /* LaunchScreen.storyboard */,
-				21EBBF691C9AF7DE0054CB05 /* Info.plist */,
-				21EBBF611C9AF7DE0054CB05 /* iOSFootixSlack.xcdatamodeld */,
-			);
-			path = iOSFootixSlack;
-			sourceTree = "<group>";
-		};
 		5696DAEE14D703A534425FE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				7A65BF981C94EDA400872F94 /* FootixSlack */,
-				21EBBF591C9AF7DD0054CB05 /* iOSFootixSlack */,
 				7A65BF971C94EDA400872F94 /* Products */,
 				1D5AAB7C3389A9983ABB93A2 /* Pods */,
 				5696DAEE14D703A534425FE9 /* Frameworks */,
@@ -283,25 +261,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		21EBBF5E1C9AF7DD0054CB05 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21EBBF5F1C9AF7DD0054CB05 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		21EBBF661C9AF7DE0054CB05 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21EBBF671C9AF7DE0054CB05 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		7A65BFA61C94EDA400872F94 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -435,19 +394,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		21EBBF611C9AF7DE0054CB05 /* iOSFootixSlack.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				21EBBF621C9AF7DE0054CB05 /* iOSFootixSlack.xcdatamodel */,
-			);
-			currentVersion = 21EBBF621C9AF7DE0054CB05 /* iOSFootixSlack.xcdatamodel */;
-			path = iOSFootixSlack.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7A65BF8E1C94EDA400872F94 /* Project object */;
 }
