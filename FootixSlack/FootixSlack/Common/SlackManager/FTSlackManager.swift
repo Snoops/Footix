@@ -47,10 +47,10 @@ class FTSlackManager: NSObject, MessageEventsDelegate, SlackEventsDelegate {
         NSLOG("     Team : \((client.team?.name)!)")
         NSLOG("     Authenticated user : \((client.authenticatedUser?.name)!)")
         
-        for userDict in self.client.users as [String : User] {
-            NSLOG("     Bots : \(userDict)")
-            NSLOG("==================================================")
-        }
+//        for userDict in self.client.users as [String : User] {
+//            NSLOG("     Bots : \(userDict)")
+//            NSLOG("==================================================")
+//        }
     }
     
     func clientDisconnected() {}
@@ -102,6 +102,10 @@ class FTSlackManager: NSObject, MessageEventsDelegate, SlackEventsDelegate {
     
     func manualPresenceChanged(user: User?, presence: String?) {}
     
-    func botEvent(bot: Bot) {}
+    func botEvent(bot: Bot) {
+    
+        NSLOG("FTSlackManager | botEvent() | Bot: \(bot)")
+    
+    }
 
 }

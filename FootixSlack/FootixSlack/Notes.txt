@@ -10,8 +10,9 @@ Managers
 
         - Save, Retrieve, Modify, Delete data received from API
 
-    Message Manager
+    Slack Manager
 
+        - Login, Connect, Disconnect Slack Client
         - Listen for incoming messages for a given channel
         - Analyze mentions, reactions etc
         - Dispatch informations
