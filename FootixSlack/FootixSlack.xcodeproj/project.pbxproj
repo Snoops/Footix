@@ -12,12 +12,12 @@
 		214864A81C9C7B4700EB77BE /* FTWeakReferenceMutableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214864A71C9C7B4700EB77BE /* FTWeakReferenceMutableArray.swift */; };
 		214864AA1C9C802A00EB77BE /* FTChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214864A91C9C802A00EB77BE /* FTChatBot.swift */; };
 		450B0620130B102498D2FB70 /* Pods_FootixSlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE8ABC053B420B4FB6E014B /* Pods_FootixSlack.framework */; };
+		7A57918A1C9CE9E9006FB18F /* FootixSlack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A5791881C9CE9E9006FB18F /* FootixSlack.xcdatamodeld */; };
 		7A65BF9A1C94EDA400872F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BF991C94EDA400872F94 /* AppDelegate.swift */; };
 		7A65BF9C1C94EDA400872F94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BF9B1C94EDA400872F94 /* ViewController.swift */; };
 		7A65BFA11C94EDA400872F94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A65BFA01C94EDA400872F94 /* Assets.xcassets */; };
 		7A65BFAD1C9625FD00872F94 /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7A65BFAB1C9625FD00872F94 /* Notes.txt */; };
 		7A65BFB21C96265B00872F94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A65BFB11C96265B00872F94 /* Main.storyboard */; };
-		7A65BFBA1C96286600872F94 /* FootixSlack.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BFB91C96286600872F94 /* FootixSlack.xcdatamodel */; };
 		7A65BFC41C9BA33D00872F94 /* FTSlackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BFC31C9BA33D00872F94 /* FTSlackManager.swift */; };
 		7A65BFC61C9BA86300872F94 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BFC51C9BA86300872F94 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +29,7 @@
 		214864A71C9C7B4700EB77BE /* FTWeakReferenceMutableArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWeakReferenceMutableArray.swift; sourceTree = "<group>"; };
 		214864A91C9C802A00EB77BE /* FTChatBot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatBot.swift; sourceTree = "<group>"; };
 		3AE8ABC053B420B4FB6E014B /* Pods_FootixSlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootixSlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5791891C9CE9E9006FB18F /* FootixSlack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FootixSlack.xcdatamodel; sourceTree = "<group>"; };
 		7A65BF961C94EDA400872F94 /* FootixSlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootixSlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A65BF991C94EDA400872F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A65BF9B1C94EDA400872F94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewControllers/ViewController.swift; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		7A65BFA51C94EDA400872F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A65BFAB1C9625FD00872F94 /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		7A65BFB11C96265B00872F94 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
-		7A65BFB91C96286600872F94 /* FootixSlack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FootixSlack.xcdatamodel; sourceTree = "<group>"; };
 		7A65BFC31C9BA33D00872F94 /* FTSlackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTSlackManager.swift; sourceTree = "<group>"; };
 		7A65BFC51C9BA86300872F94 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9E5D9579C365D01C6D0753A4 /* Pods-FootixSlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootixSlack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootixSlack/Pods-FootixSlack.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 		7A65BFB81C9626CD00872F94 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				7A65BFB91C96286600872F94 /* FootixSlack.xcdatamodel */,
+				7A5791881C9CE9E9006FB18F /* FootixSlack.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -307,11 +307,11 @@
 				214864AA1C9C802A00EB77BE /* FTChatBot.swift in Sources */,
 				214864A81C9C7B4700EB77BE /* FTWeakReferenceMutableArray.swift in Sources */,
 				214864A31C9C730400EB77BE /* FTSlackManagerListener.swift in Sources */,
+				7A57918A1C9CE9E9006FB18F /* FootixSlack.xcdatamodeld in Sources */,
 				7A65BF9C1C94EDA400872F94 /* ViewController.swift in Sources */,
 				214864A11C9C71BF00EB77BE /* String+Extensions.swift in Sources */,
 				7A65BFC41C9BA33D00872F94 /* FTSlackManager.swift in Sources */,
 				7A65BF9A1C94EDA400872F94 /* AppDelegate.swift in Sources */,
-				7A65BFBA1C96286600872F94 /* FootixSlack.xcdatamodel in Sources */,
 				7A65BFC61C9BA86300872F94 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +451,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7A5791881C9CE9E9006FB18F /* FootixSlack.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7A5791891C9CE9E9006FB18F /* FootixSlack.xcdatamodel */,
+			);
+			currentVersion = 7A5791891C9CE9E9006FB18F /* FootixSlack.xcdatamodel */;
+			path = FootixSlack.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7A65BF8E1C94EDA400872F94 /* Project object */;
 }

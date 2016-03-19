@@ -15,12 +15,53 @@ class FTChatBot: NSObject, FTSlackManagerListener {
     // MARK: Properties
     //===========================
 
-    /** ChatBot unique ID */
+    /** ChatBot unique ID. */
     private(set) var uniqueID:String? = nil
     
-    /** ChatBot name */
+    /** ChatBot name. */
     private(set) var name:String? = nil
 
+    private let defaultUnknownResponse:String = "I'M NOT SURE IF I UNDERSTAND WHAT YOU ARE TALKING ABOUT."
+    
+    private let defaultRepeatQuestionResponse:String = "ARE YOU REALLY MAKING ME REPEAT MYSELF??"
+    
+    private let defaultRepeatAnswerResponse: String = "ARE YOU MOCKING ME?"
+    
+    /** Temporary test knowledge base. Dictionary of questions/answers. */
+    private var knowledgeBase: [String : String] = ["HOW ARE YOU": "I'M GREAT THANK YOU!",
+                                                    "WHATS YOUR NAME": "MY NAME IS @FOOTIX",
+                                                    "WHAT ARE YOU": "I'M A BOT",
+                                                    "ARE YOU INTELLIGENT": "OF COURSE!",
+                                                    "BYE": "IT WAS NICE TALKING TO YOU, SEE YOU NEXT TIME!"]
+    
+    /** */
+    private var previousInputMessage: Message? = nil
+    
+    /** */
+    private var previousOutputMessage: Message? = nil
+    
+    /** Message received by FTSlackManager and destined to the chatBot. */
+    private var inputMessage: Message? = nil {
+        didSet {
+            // Try to find a match for the input message.
+            self.outputMessage = self.findMatch(self.inputMessage!)
+            
+            // Save last input.
+            self.previousInputMessage = self.inputMessage
+        }
+    }
+    
+    /** Response message to be sent as a reply. */
+    private var outputMessage: Message? = nil {
+        didSet {
+            // When a match is found send the response message to user.
+            self.sendResponseMessage(self.outputMessage!)
+            
+            // Save last output
+            self.previousOutputMessage = self.outputMessage
+        }
+    }
+    
     //===========================
     // MARK: Constructor
     //===========================
@@ -29,29 +70,108 @@ class FTChatBot: NSObject, FTSlackManagerListener {
         //Call the base
         super.init()
         
+        // Set properties
         self.uniqueID = uniqueID
         self.name = name
         
         //Add self as a delegate to slack manager listener
         FTSlackManager.sharedManager.addListener(self)
-        
     }
     
     deinit {
-        
         //Remove self as a delegate to slack manager listener
         FTSlackManager.sharedManager.removeListener(self)
+    }
+    
+    //====================================
+    // MARK: - Finding Match
+    //====================================
+    
+    /** Called when an input message is received to find a corresponding match in the knowledge base.
+    - parameter message: The input message to compare against knowledge base.
+    - return: The response message that needs to be sent as response to user.
+    */
+    func findMatch(message: Message) -> Message {
         
+        NSLOG("FTChatBot | findMatch()")
+        
+        // Check that new incoming message is different from previous input message.
+        if self.previousInputMessage != nil && message.text! == self.previousInputMessage?.text! {
+            return Message(message: ["text": self.defaultRepeatQuestionResponse, "channel": message.channel!])!
+        }
+        
+        // Check that new incoming message is different from previous output message.
+        if self.previousOutputMessage != nil && message.text! == self.previousOutputMessage?.text! {
+            return Message(message: ["text": self.defaultRepeatAnswerResponse, "channel": message.channel!])!
+        }
+        
+        // Loop through knowledge base dictionary
+        for (question, answer) in self.knowledgeBase {
+            
+            // If we find a question matching the user's input question
+            if question == message.text! {
+                
+                NSLOG("     FTChatBot | findMatch() | Match found!")
+                
+                // We create a response message with text answer from knowledge base.
+                return Message(message: ["text": answer, "channel": message.channel!])!
+            }
+        }
+            
+        // We create a response message with text answer from knowledge base.
+        return Message(message: ["text": self.defaultUnknownResponse, "channel": message.channel!])!
+
+    }
+    
+    //====================================
+    // MARK: - Sending Response
+    //====================================
+    
+    /** Called when a response match is found for the input message.
+    - parameter response: The response message to send back to the user.
+    */
+    func sendResponseMessage(response: Message) {
+        
+        NSLOG("FTChatBot | sendResponseMessage() | Response: \(response.text!)")
+        
+        // FTSlackManager sends response back to slack channel.
+        FTSlackManager.sharedManager.sendResponse(response)
     }
     
     //====================================
     // MARK: - FTSlackManagerListener
     //====================================
     
+    /** Called when the FTSlackManager receives a message destined to our bot.
+    - parameter manager: The manager that has triggered the event
+    - parameter message: The message that should be handled
+    */
     func slackManager(manager: FTSlackManager, didReceiveMessage message: Message) {
         
         NSLOG("FTBot | didReceiveMessage | Text: \(message.text!)")
+
+        // Set incoming message as our inputMessage
+        self.inputMessage = message
+
+    }
+    
+    /** Called when the FTSlackManager sends a response message.
+     - parameter manager: The manager that has triggered the event
+     - parameter message: The message that was sent as a response.
+    */
+    func slackManager(manager: FTSlackManager, didSendResponseMessage message: Message) {
         
+        NSLOG("FTBot | didSendResponseMessage | Text: \(message.text!)")
     }
     
 }
+
+
+
+
+
+
+
+
+
+

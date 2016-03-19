@@ -31,7 +31,6 @@ Models
         - Analyze messages
         - Get information with keywords from API Manager
         - Send relevant information to Message manager, who will send them back to slack
-        - Should be totally modular and independant from Slack
 
 Statistiques
 

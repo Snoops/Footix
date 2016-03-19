@@ -21,6 +21,6 @@ protocol FTSlackManagerListener {
      - parameter manager: The manager that has triggered the event
      - parameter message: The message that was sent as a response.
      */
-    func slackManager(manager: FTSlackManager, didSendResponseMessage message: Message)
+    func slackManager(manager: FTSlackManager, didSendResponseMessage responseMessage: Message)
     
 }

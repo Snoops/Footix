@@ -50,8 +50,8 @@ class FTSlackManager: NSObject, MessageEventsDelegate, SlackEventsDelegate {
         
         NSLOG("FTSlackManager | clientConnected()")
         NSLOG("     Team : \((client.team?.name)!)")
-        NSLOG("     Authenticated user   : \((client.authenticatedUser?.name)!)")
-        NSLOG("     Authenticated userID : \((client.authenticatedUser?.id)!)")
+        NSLOG("     Authenticated user   : \(client.authenticatedUser?.name)")
+//        NSLOG("     Authenticated userID : \((client.authenticatedUser?.id)!)")
         
         /** Initialize FTChatBot instance */
         self.chatBot = FTChatBot(uniqueID: (self.client.authenticatedUser?.id)!, name: (self.client.authenticatedUser?.name)!)
@@ -88,17 +88,36 @@ class FTSlackManager: NSObject, MessageEventsDelegate, SlackEventsDelegate {
     func messageDeleted(message: Message?) {}
     
     //====================================
+    // MARK: - Send Response
+    //====================================
+    
+    func sendResponse(response: Message) {
+        
+        self.client.sendMessage(response.text!, channelID: response.channel!)
+        
+    }
+    
+    //====================================
     // MARK: - Filter and Dispatch
     //====================================
     
     func filterBotMessage(message: Message) {
         
         // Look for occurences of chatBot uniqueID in received message.
-        if message.text!.rangeOfString((self.chatBot?.uniqueID)!) != nil {
+        
+        NSLOG("FTSlackManager | filterBotMessage() | Message Bot: \(message.user!)")
+        NSLOG("FTSlackManager | filterBotMessage() | Chat Bot unique ID: \(self.chatBot!.uniqueID!)")
+        
+        if message.user != self.chatBot?.uniqueID {
             
-            // Message was destined to ChatBot, so dispatch it to listeners.
-            self.dispatchMessageToListeners(message)
+            //if message.text!.rangeOfString((self.chatBot?.uniqueID)!) != nil {
+            
+                // Message was destined to ChatBot, so dispatch it to listeners.
+                self.dispatchMessageToListeners(message)
+            //}
+            
         }
+
     }
     
     func dispatchMessageToListeners(message: Message) {
