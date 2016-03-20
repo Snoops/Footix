@@ -108,7 +108,7 @@ class FTChatBot: NSObject, FTSlackManagerListener {
         // Loop through knowledge base dictionary
         for (question, answer) in self.knowledgeBase {
             
-            // If we find a question matching the user's input question
+            // If we find a question matching the user's input question            
             if question == message.text! {
                 
                 NSLOG("     FTChatBot | findMatch() | Match found!")
@@ -120,7 +120,6 @@ class FTChatBot: NSObject, FTSlackManagerListener {
             
         // We create a response message with text answer from knowledge base.
         return Message(message: ["text": self.defaultUnknownResponse, "channel": message.channel!])!
-
     }
     
     //====================================
@@ -152,7 +151,6 @@ class FTChatBot: NSObject, FTSlackManagerListener {
 
         // Set incoming message as our inputMessage
         self.inputMessage = message
-
     }
     
     /** Called when the FTSlackManager sends a response message.

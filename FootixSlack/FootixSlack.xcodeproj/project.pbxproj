@@ -20,6 +20,7 @@
 		7A65BFB21C96265B00872F94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A65BFB11C96265B00872F94 /* Main.storyboard */; };
 		7A65BFC41C9BA33D00872F94 /* FTSlackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BFC31C9BA33D00872F94 /* FTSlackManager.swift */; };
 		7A65BFC61C9BA86300872F94 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A65BFC51C9BA86300872F94 /* Constants.swift */; };
+		7ABDDA2C1C9EFFC1002AAC17 /* FTFuzzySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABDDA2B1C9EFFC1002AAC17 /* FTFuzzySearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		7A65BFB11C96265B00872F94 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
 		7A65BFC31C9BA33D00872F94 /* FTSlackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTSlackManager.swift; sourceTree = "<group>"; };
 		7A65BFC51C9BA86300872F94 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7ABDDA2B1C9EFFC1002AAC17 /* FTFuzzySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFuzzySearch.swift; sourceTree = "<group>"; };
 		9E5D9579C365D01C6D0753A4 /* Pods-FootixSlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootixSlack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootixSlack/Pods-FootixSlack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 				7A65BFC51C9BA86300872F94 /* Constants.swift */,
 				7A65BFC21C9BA28B00872F94 /* SlackManager */,
 				7A65BFBF1C9BA1AB00872F94 /* ChatBot */,
+				7ABDDA2A1C9EFF87002AAC17 /* FuzzySearch */,
 				2148649F1C9C718F00EB77BE /* Extensions */,
 				214864A41C9C74BE00EB77BE /* FTWeakReferenceMutableArray */,
 			);
@@ -179,6 +182,14 @@
 				214864A21C9C730400EB77BE /* FTSlackManagerListener.swift */,
 			);
 			path = SlackManager;
+			sourceTree = "<group>";
+		};
+		7ABDDA2A1C9EFF87002AAC17 /* FuzzySearch */ = {
+			isa = PBXGroup;
+			children = (
+				7ABDDA2B1C9EFFC1002AAC17 /* FTFuzzySearch.swift */,
+			);
+			path = FuzzySearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 				7A57918A1C9CE9E9006FB18F /* FootixSlack.xcdatamodeld in Sources */,
 				7A65BF9C1C94EDA400872F94 /* ViewController.swift in Sources */,
 				214864A11C9C71BF00EB77BE /* String+Extensions.swift in Sources */,
+				7ABDDA2C1C9EFFC1002AAC17 /* FTFuzzySearch.swift in Sources */,
 				7A65BFC41C9BA33D00872F94 /* FTSlackManager.swift in Sources */,
 				7A65BF9A1C94EDA400872F94 /* AppDelegate.swift in Sources */,
 				7A65BFC61C9BA86300872F94 /* Constants.swift in Sources */,

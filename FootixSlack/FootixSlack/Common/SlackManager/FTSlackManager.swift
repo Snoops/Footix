@@ -101,12 +101,8 @@ class FTSlackManager: NSObject, MessageEventsDelegate, SlackEventsDelegate {
     // MARK: - Filter and Dispatch
     //====================================
     
+    // Look for occurences of chatBot uniqueID in received message.
     func filterBotMessage(message: Message) {
-        
-        // Look for occurences of chatBot uniqueID in received message.
-        
-        NSLOG("FTSlackManager | filterBotMessage() | Message Bot: \(message.user!)")
-        NSLOG("FTSlackManager | filterBotMessage() | Chat Bot unique ID: \(self.chatBot!.uniqueID!)")
         
         if message.user != self.chatBot?.uniqueID {
             

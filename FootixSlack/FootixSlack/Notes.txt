@@ -1,3 +1,51 @@
+
+CHATBOT 9
+
+-
+
+CHATBOT 8
+
+- Handle equivalent keywords.
+- Handle repetitions with slight changes: i.e. 'How are you?' vs 'Hey, how are you?'
+
+CHATBOT 7
+
+- Keywords ranking by score.
+
+CHATBOT 6
+
+- Adding a welcome message -- Not for us.
+
+CHATBOT 5
+
+- Improve Knowledge Database
+- Handle if user enter '@footix' and nothing else
+
+CHATBOT 4
+
+- Implement FuzzySearch
+- Handle bot's userID in strings, so 'Hey @footix, how are you?' matches 'how are you'
+
+CHATBOT 3
+
+OK - Se rappeler de la precedente question et réponse.
+
+- Mettre toutes les lettres en capital avant de faire la recherche dans DB.
+- Supprimer les espaces en trop.
+- Supprimer les signes de ponctuation.
+
+CHATBOT 2
+
+OK - Introducing keywords with responses matching questions
+OK - Handle repetition
+OK - Handle default sentence, if chatbot don't understand the question for exemple
+
+CHATBOT 1
+
+OK - Output random answer to any user input
+
+===============================================================================
+
 REQUIREMENTS
 
 Managers
