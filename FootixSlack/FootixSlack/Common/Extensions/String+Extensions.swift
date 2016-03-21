@@ -12,9 +12,22 @@ extension String {
     
     func cleanString() -> String {
         
-        let stringToClean = self
+        let stringToClean: String = self
         
         NSLOG("String+Extensions | clean() | stringToClean:'\(stringToClean)'")
+        
+        var characters = self.characters.map { String($0) }
+        
+        for var i = 0; i < characters.count; i++ {
+            
+            let char: String = characters[i]
+            
+            if char.isPunctuation() == true {
+                characters.removeAtIndex(i)
+            }
+        }
+        
+//        stringToClean = stringToClean.stringByReplacingOccurrencesOfString(<#T##target: String##String#>, withString: <#T##String#>)
         
         return stringToClean
     }

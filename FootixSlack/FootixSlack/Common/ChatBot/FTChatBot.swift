@@ -107,6 +107,7 @@ class FTChatBot: NSObject, FTSlackManagerListener {
             return Message(message: ["text": self.defaultRepeatAnswerResponse, "channel": message.channel!])!
         }
         
+        /** Store scores for best approximate match. */
         var scoreDictionay: [Double: String] = [Double: String]()
         
         // Loop through knowledge base dictionary
@@ -121,22 +122,40 @@ class FTChatBot: NSObject, FTSlackManagerListener {
                 // We create a response message with text answer from knowledge base.
                 return Message(message: ["text": answer, "channel": message.channel!])!
                 
-            } else {
+            } else { // Else, we try to find the best approximate match.
                 
                 NSLOG("     FTChatBot | findMatch() | No match found!")
                 
-                let fuzzySearchScore: Double = FTFuzzySearch.score(originalString: question, stringToMatch: inputText, fuzziness: 1.0)
+                // Find score for each DB entry
+                let fuzzySearchScore: Double = FTFuzzySearch.score(originalString: question, stringToMatch: inputText, fuzziness: 0.0)
                 
+                // Store scores in dictionary
                 scoreDictionay[fuzzySearchScore] = question
                 
                 NSLOG("         FTChatBot | findMatch() | Score: \(fuzzySearchScore) | Question: \(question)")
                 
             }
-            
         }
             
-        // We create a response message with text answer from knowledge base.
-        return Message(message: ["text": self.defaultUnknownResponse, "channel": message.channel!])!
+        NSLOG("FTChatBot | No match found | ScoreDict: \(scoreDictionay)")
+        
+        // Order score keys. Best score should be the first element.
+        let sortedKeys = scoreDictionay.keys.sort(>)
+        
+        NSLOG("FTChatBot | No match found | Best Score: \(sortedKeys)")
+        
+        // Check if first element's score is better than 0.
+        if sortedKeys.first > 0.0 {
+            
+            // Return best approximate match.
+            let messageToReturn = self.knowledgeBase[scoreDictionay[sortedKeys.first!]!]!
+            return Message(message: ["text": messageToReturn, "channel": message.channel!])!
+                
+        } else { // Else return 'default unknow answer' response.
+                
+            // We create a response message with text answer from knowledge base.
+            return Message(message: ["text": self.defaultUnknownResponse, "channel": message.channel!])!
+        }
     }
     
     //====================================
