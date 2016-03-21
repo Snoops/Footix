@@ -125,7 +125,7 @@ class FTChatBot: NSObject, FTSlackManagerListener {
                 
                 NSLOG("     FTChatBot | findMatch() | No match found!")
                 
-                let fuzzySearchScore: Double = FTFuzzySearch.score(originalString: question, stringToMatch: inputText, fuzziness: 0.5)
+                let fuzzySearchScore: Double = FTFuzzySearch.score(originalString: question, stringToMatch: inputText, fuzziness: 1.0)
                 
                 scoreDictionay[fuzzySearchScore] = question
                 
