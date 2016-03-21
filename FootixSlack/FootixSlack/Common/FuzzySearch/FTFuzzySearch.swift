@@ -77,7 +77,7 @@ class FTFuzzySearch {
         }
         
         // Check isCaseSensitive if true lowercase the contents of both strings
-        if isCaseSensitive {
+        if !isCaseSensitive {
             tempOriginalString = tempOriginalString.lowercaseString
             tempStringToSearch = tempStringToSearch.lowercaseString
         }
@@ -132,7 +132,7 @@ class FTFuzzySearch {
         }
         
         // Check isCaseSensitive if true lowercase the contents of both strings
-        if isCaseSensitive {
+        if !isCaseSensitive {
             originalString = originalString.lowercaseString
             stringToSearch = stringToSearch.lowercaseString
         }

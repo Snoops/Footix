@@ -19,7 +19,7 @@ class FTSlackManager: NSObject, MessageEventsDelegate, SlackEventsDelegate {
     static let sharedManager = FTSlackManager()
     
     /** Instance of SlackKit Client */
-    let client:Client = Client(apiToken: Constants.FTSlackClient.token)
+    let client:Client = Client(apiToken: Constants.SlackClient.token)
     
     var chatBot: FTChatBot?
     

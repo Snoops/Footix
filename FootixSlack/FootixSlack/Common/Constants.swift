@@ -17,7 +17,7 @@ struct Constants {
         
     }
     
-    struct FTSlackClient {
+    struct SlackClient {
         
         // Authentication token
         static let token: String = "xoxb-26175293891-3l4kYku020nxtGQ6DvhyNH1o"

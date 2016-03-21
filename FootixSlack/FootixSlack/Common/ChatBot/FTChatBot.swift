@@ -95,27 +95,44 @@ class FTChatBot: NSObject, FTSlackManagerListener {
         
         NSLOG("FTChatBot | findMatch()")
         
+        let inputText: String = message.text!.cleanString()
+        
         // Check that new incoming message is different from previous input message.
-        if self.previousInputMessage != nil && message.text! == self.previousInputMessage?.text! {
+        if self.previousInputMessage != nil && inputText == self.previousInputMessage?.text! {
             return Message(message: ["text": self.defaultRepeatQuestionResponse, "channel": message.channel!])!
         }
         
         // Check that new incoming message is different from previous output message.
-        if self.previousOutputMessage != nil && message.text! == self.previousOutputMessage?.text! {
+        if self.previousOutputMessage != nil && inputText == self.previousOutputMessage?.text! {
             return Message(message: ["text": self.defaultRepeatAnswerResponse, "channel": message.channel!])!
         }
+        
+        var scoreDictionay: [Double: String] = [Double: String]()
         
         // Loop through knowledge base dictionary
         for (question, answer) in self.knowledgeBase {
             
-            // If we find a question matching the user's input question            
-            if question == message.text! {
+            // If we find a question matching the user's input question
+            if FTFuzzySearch.search(originalString: question, stringToSearch: inputText, isCaseSensitive: false) == true {
                 
                 NSLOG("     FTChatBot | findMatch() | Match found!")
+                NSLOG("         FTChatBot | findMatch() | Question: \(question) | Answer: \(answer)")
                 
                 // We create a response message with text answer from knowledge base.
                 return Message(message: ["text": answer, "channel": message.channel!])!
+                
+            } else {
+                
+                NSLOG("     FTChatBot | findMatch() | No match found!")
+                
+                let fuzzySearchScore: Double = FTFuzzySearch.score(originalString: question, stringToMatch: inputText, fuzziness: 0.5)
+                
+                scoreDictionay[fuzzySearchScore] = question
+                
+                NSLOG("         FTChatBot | findMatch() | Score: \(fuzzySearchScore) | Question: \(question)")
+                
             }
+            
         }
             
         // We create a response message with text answer from knowledge base.
@@ -138,6 +155,10 @@ class FTChatBot: NSObject, FTSlackManagerListener {
     }
     
     //====================================
+    // MARK: - Clean String
+    //====================================
+    
+    //====================================
     // MARK: - FTSlackManagerListener
     //====================================
     
@@ -148,7 +169,7 @@ class FTChatBot: NSObject, FTSlackManagerListener {
     func slackManager(manager: FTSlackManager, didReceiveMessage message: Message) {
         
         NSLOG("FTBot | didReceiveMessage | Text: \(message.text!)")
-
+        
         // Set incoming message as our inputMessage
         self.inputMessage = message
     }
