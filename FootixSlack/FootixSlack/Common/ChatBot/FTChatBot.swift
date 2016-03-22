@@ -95,6 +95,7 @@ class FTChatBot: NSObject, FTSlackManagerListener {
         
         NSLOG("FTChatBot | findMatch()")
         
+        // Clean input message before searching for a response.
         let inputText: String = self.cleanString(message.text!)
         
         // Check that new incoming message is different from previous input message.
@@ -113,7 +114,7 @@ class FTChatBot: NSObject, FTSlackManagerListener {
         // Loop through knowledge base dictionary
         for (question, answer) in self.knowledgeBase {
             
-            // If we find a question matching the user's input question
+            // If we find a perfect match.
             if FTFuzzySearch.search(originalString: question, stringToSearch: inputText, isCaseSensitive: false) == true {
                 
                 NSLOG("     FTChatBot | findMatch() | Match found!")
@@ -125,9 +126,9 @@ class FTChatBot: NSObject, FTSlackManagerListener {
             } else { // Else, we try to find the best approximate match.
                 
                 NSLOG("     FTChatBot | findMatch() | No match found!")
-                
+
                 // Find score for each DB entry
-                let fuzzySearchScore: Double = FTFuzzySearch.score(originalString: question, stringToMatch: inputText, fuzziness: 0.0)
+                let fuzzySearchScore: Double = FTFuzzySearch.score(originalString: question, stringToMatch: inputText, fuzziness: 1.5)
                 
                 // Store scores in dictionary
                 scoreDictionay[fuzzySearchScore] = question

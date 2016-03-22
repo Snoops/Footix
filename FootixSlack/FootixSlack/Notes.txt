@@ -23,6 +23,7 @@ CHATBOT 5
 
 CHATBOT 4
 
+- Test fuzziness
 OK - Implement FuzzySearch
 OK - Handle bot's userID in strings, so 'Hey @footix, how are you?' matches 'how are you'
 
@@ -89,3 +90,64 @@ Extra
     - Add Reminders, show reminders                                             i.e. @footix remind me to watch next OM - PSG.
     - Provides pronostics based on previous games and previous teams games.     i.e. @footix what do you think of the coming Barça - Bayern game?
     - Provides user with latest/hotest news with redirect link.                 i.e. @footix what's the latest (soccer) news in France?
+
+
+
+
+
+
+TESTS
+
+Fuzzyness 0.0
+
+2016-03-22 00:28:34.064 FootixSlack[14736:490147]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:28:34.064 FootixSlack[14736:490147]          FTChatBot | findMatch() | Score: 0.156461988304094 | Question: ARE YOU INTELLIGENT
+2016-03-22 00:28:34.064 FootixSlack[14736:490147]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:28:34.065 FootixSlack[14736:490147]          FTChatBot | findMatch() | Score: 0.151333333333333 | Question: BYE
+2016-03-22 00:28:34.065 FootixSlack[14736:490147]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:28:34.065 FootixSlack[14736:490147]          FTChatBot | findMatch() | Score: 0.150952380952381 | Question: WHATS YOUR NAME
+2016-03-22 00:28:34.065 FootixSlack[14736:490147]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:28:34.066 FootixSlack[14736:490147]          FTChatBot | findMatch() | Score: 0.172203856749311 | Question: HOW ARE YOU
+2016-03-22 00:28:34.066 FootixSlack[14736:490147]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:28:34.066 FootixSlack[14736:490147]          FTChatBot | findMatch() | Score: 0.167045454545455 | Question: WHAT ARE YOU
+
+Fuzzyness 0.5
+
+2016-03-22 00:30:18.131 FootixSlack[14800:491274]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:30:18.131 FootixSlack[14800:491274]          FTChatBot | findMatch() | Score: 0.161929824561404 | Question: ARE YOU INTELLIGENT
+2016-03-22 00:30:18.132 FootixSlack[14800:491274]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:30:18.132 FootixSlack[14800:491274]          FTChatBot | findMatch() | Score: 0.1525 | Question: BYE
+2016-03-22 00:30:18.132 FootixSlack[14800:491274]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:30:18.132 FootixSlack[14800:491274]          FTChatBot | findMatch() | Score: 0.151777777777778 | Question: WHATS YOUR NAME
+2016-03-22 00:30:18.132 FootixSlack[14800:491274]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:30:18.133 FootixSlack[14800:491274]          FTChatBot | findMatch() | Score: 0.190707070707071 | Question: HOW ARE YOU
+2016-03-22 00:30:18.133 FootixSlack[14800:491274]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:30:18.133 FootixSlack[14800:491274]          FTChatBot | findMatch() | Score: 0.18125 | Question: WHAT ARE YOU
+
+Fuzzyness 1.0
+
+2016-03-22 00:31:25.190 FootixSlack[14859:492024]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:31:25.191 FootixSlack[14859:492024]          FTChatBot | findMatch() | Score: 0.227543859649123 | Question: ARE YOU INTELLIGENT
+2016-03-22 00:31:25.191 FootixSlack[14859:492024]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:31:25.191 FootixSlack[14859:492024]          FTChatBot | findMatch() | Score: 0.17 | Question: BYE
+2016-03-22 00:31:25.191 FootixSlack[14859:492024]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:31:25.191 FootixSlack[14859:492024]          FTChatBot | findMatch() | Score: 0.163333333333333 | Question: WHATS YOUR NAME
+2016-03-22 00:31:25.192 FootixSlack[14859:492024]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:31:25.192 FootixSlack[14859:492024]          FTChatBot | findMatch() | Score: 0.394242424242424 | Question: HOW ARE YOU
+2016-03-22 00:31:25.192 FootixSlack[14859:492024]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:31:25.192 FootixSlack[14859:492024]          FTChatBot | findMatch() | Score: 0.3375 | Question: WHAT ARE YOU
+
+Fuzzyness 1.5
+
+2016-03-22 00:32:22.812 FootixSlack[14915:492894]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:32:22.812 FootixSlack[14915:492894]          FTChatBot | findMatch() | Score: 0.132768031189084 | Question: ARE YOU INTELLIGENT
+2016-03-22 00:32:22.812 FootixSlack[14915:492894]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:32:22.813 FootixSlack[14915:492894]          FTChatBot | findMatch() | Score: 0.146666666666667 | Question: BYE
+2016-03-22 00:32:22.813 FootixSlack[14915:492894]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:32:22.813 FootixSlack[14915:492894]          FTChatBot | findMatch() | Score: 0.147575757575758 | Question: WHATS YOUR NAME
+2016-03-22 00:32:22.813 FootixSlack[14915:492894]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:32:22.813 FootixSlack[14915:492894]          FTChatBot | findMatch() | Score: 0.0889393939393939 | Question: HOW ARE YOU
+2016-03-22 00:32:22.814 FootixSlack[14915:492894]      FTChatBot | findMatch() | No match found!
+2016-03-22 00:32:22.814 FootixSlack[14915:492894]          FTChatBot | findMatch() | Score: 0.103125 | Question: WHAT ARE YOU
+
+

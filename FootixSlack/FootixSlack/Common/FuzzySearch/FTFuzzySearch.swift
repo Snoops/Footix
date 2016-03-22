@@ -191,12 +191,7 @@ class FTFuzzySearch {
         if originalString.isEmpty || stringToMatch.isEmpty {
             return 0
         }
-        
-//        // The stringToMatch is greater than originalString return score of 0
-//        if originalString.characters.count < stringToMatch.characters.count {
-//            return 0
-//        }
-        
+
         // Either String objects are the same return score of 1
         if originalString == stringToMatch {
             return 1
