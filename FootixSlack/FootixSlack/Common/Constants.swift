@@ -12,15 +12,16 @@ struct Constants {
     
     struct AppSettings {
         
-        //If debug mode is on or not.
+        /** If debug mode is on or not. */
         static let debugModeOn:Bool = true
         
     }
     
     struct SlackClient {
         
-        // Authentication token
+        /** Authentication token */
         static let token: String = "xoxb-26175293891-3l4kYku020nxtGQ6DvhyNH1o"
+        
     }
     
 }

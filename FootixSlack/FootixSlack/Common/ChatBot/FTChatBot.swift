@@ -95,7 +95,7 @@ class FTChatBot: NSObject, FTSlackManagerListener {
         
         NSLOG("FTChatBot | findMatch()")
         
-        let inputText: String = message.text!.cleanString()
+        let inputText: String = self.cleanString(message.text!)
         
         // Check that new incoming message is different from previous input message.
         if self.previousInputMessage != nil && inputText == self.previousInputMessage?.text! {
@@ -176,6 +176,68 @@ class FTChatBot: NSObject, FTSlackManagerListener {
     //====================================
     // MARK: - Clean String
     //====================================
+    
+    func cleanString(stringToClean: String) -> String {
+        
+        NSLOG("FTChatBot | clean() | StringToClean: \(stringToClean)")
+    
+        let stringToClean2 = stringToClean.stringByReplacingOccurrencesOfString("<@U0S558MS7> ", withString: "")
+
+        var cleanedString: String = ""
+        var previousCharacter: String? = nil
+        
+        let stringLength = stringToClean2.characters.count
+        
+        NSLOG("     StringLength: \(stringToClean2)")
+        
+        for var i = 0; i < stringLength; i++ {
+            
+            NSLOG("     Current Char: \(stringToClean2[i] as String)")
+            
+            if stringToClean2[i] == " " && previousCharacter == " " {
+                continue
+            }
+            
+            if self.isPunctuation(stringToClean2[i]) == false {
+                cleanedString.append(stringToClean2[i])
+                NSLOG("         CleanedString: \(cleanedString)")
+            }
+            
+            previousCharacter = stringToClean2[i]
+            
+        }
+        
+        return cleanedString
+    }
+    
+    func isPunctuation(char:String) -> Bool {
+                
+        let ponctuationCharacters: [String] = ["?", "!", ".", ";", ",", ":"]
+        
+        for punctuationChar in ponctuationCharacters {
+            
+            if char == punctuationChar {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    func trimLeft() -> String {
+        
+        return ""
+    }
+    
+    func trimRight() -> String {
+        
+        return ""
+    }
+    
+    func trimLeftAndRight() -> String {
+        
+        return ""
+    }
     
     //====================================
     // MARK: - FTSlackManagerListener

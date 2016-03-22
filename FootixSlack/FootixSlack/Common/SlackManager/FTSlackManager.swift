@@ -50,7 +50,7 @@ class FTSlackManager: NSObject, MessageEventsDelegate, SlackEventsDelegate {
         
         NSLOG("FTSlackManager | clientConnected()")
         NSLOG("     Team : \((client.team?.name)!)")
-        NSLOG("     Authenticated user   : \(client.authenticatedUser?.name)")
+        NSLOG("     Authenticated user   : \(client.authenticatedUser?.id)")
 //        NSLOG("     Authenticated userID : \((client.authenticatedUser?.id)!)")
         
         /** Initialize FTChatBot instance */
@@ -105,11 +105,11 @@ class FTSlackManager: NSObject, MessageEventsDelegate, SlackEventsDelegate {
     func filterBotMessage(message: Message) {
         
         if message.user != self.chatBot?.uniqueID {
-            
-            if message.text!.rangeOfString((self.chatBot?.uniqueID)!) != nil {
+        
+//            if message.text!.rangeOfString((self.chatBot?.uniqueID)!) != nil {
                 // Message was destined to ChatBot, so dispatch it to listeners.
                 self.dispatchMessageToListeners(message)
-            }
+//            }
         }
     }
     

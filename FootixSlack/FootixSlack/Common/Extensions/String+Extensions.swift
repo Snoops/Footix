@@ -10,55 +10,18 @@ import Foundation
 
 extension String {
     
-    func cleanString() -> String {
-        
-        let stringToClean: String = self
-        
-        NSLOG("String+Extensions | clean() | stringToClean:'\(stringToClean)'")
-        
-        var characters = self.characters.map { String($0) }
-        
-        for var i = 0; i < characters.count; i++ {
-            
-            let char: String = characters[i]
-            
-            if char.isPunctuation() == true {
-                characters.removeAtIndex(i)
-            }
-        }
-        
-//        stringToClean = stringToClean.stringByReplacingOccurrencesOfString(<#T##target: String##String#>, withString: <#T##String#>)
-        
-        return stringToClean
+    subscript (i: Int) -> Character {
+        return self[self.startIndex.advancedBy(i)]
     }
     
-    func isPunctuation() -> Bool {
-        
-        let ponctuationCharacters: [String] = ["?", "!", ".", ";", ",", ":"]
-        
-        for char in ponctuationCharacters {
-            
-            if self == char {
-                return true
-            }
-        }
-
-        return false
+    subscript (i: Int) -> String {
+        return String(self[i] as Character)
     }
     
-    func trimLeft() -> String {
-        
-        return ""
-    }
-    
-    func trimRight() -> String {
-        
-        return ""
-    }
-    
-    func trimLeftAndRight() -> String {
-        
-        return ""
+    subscript (r: Range<Int>) -> String {
+        let start = startIndex.advancedBy(r.startIndex)
+        let end = start.advancedBy(r.endIndex - r.startIndex)
+        return self[Range(start: start, end: end)]
     }
     
 }
