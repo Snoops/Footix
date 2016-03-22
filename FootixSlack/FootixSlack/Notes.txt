@@ -23,16 +23,15 @@ CHATBOT 5
 
 CHATBOT 4
 
-- Implement FuzzySearch
-- Handle bot's userID in strings, so 'Hey @footix, how are you?' matches 'how are you'
+OK - Implement FuzzySearch
+OK - Handle bot's userID in strings, so 'Hey @footix, how are you?' matches 'how are you'
 
 CHATBOT 3
 
 OK - Se rappeler de la precedente question et réponse.
-
-- Mettre toutes les lettres en capital avant de faire la recherche dans DB.
-- Supprimer les espaces en trop.
-- Supprimer les signes de ponctuation.
+OK - Mettre toutes les lettres en capital avant de faire la recherche dans DB.
+OK - Supprimer les espaces en trop.
+OK - Supprimer les signes de ponctuation.
 
 CHATBOT 2
 

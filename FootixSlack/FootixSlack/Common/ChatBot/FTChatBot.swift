@@ -181,31 +181,44 @@ class FTChatBot: NSObject, FTSlackManagerListener {
         
         NSLOG("FTChatBot | clean() | StringToClean: \(stringToClean)")
     
-        let stringToClean2 = stringToClean.stringByReplacingOccurrencesOfString("<@U0S558MS7> ", withString: "")
+        // Remove occurences of botID in string.
+        var stc = stringToClean.stringByReplacingOccurrencesOfString("<@U0S558MS7>", withString: "")
 
         var cleanedString: String = ""
         var previousCharacter: String? = nil
         
-        let stringLength = stringToClean2.characters.count
+        var stringLength = stc.characters.count
         
-        NSLOG("     StringLength: \(stringToClean2)")
+        // Loop through string's characters set.
+        for var i = 0; i < stringLength; i++ {
+            
+            // If space 
+            if stc[i] == " " && previousCharacter == " " {
+                continue
+            } else if self.isPunctuation(stc[i]) == false {
+                cleanedString.append(stc[i])
+            }
+            
+            previousCharacter = stc[i]
+        }
+        
+        stc = cleanedString
+        stringLength = stc.characters.count
+        cleanedString = ""
         
         for var i = 0; i < stringLength; i++ {
             
-            NSLOG("     Current Char: \(stringToClean2[i] as String)")
-            
-            if stringToClean2[i] == " " && previousCharacter == " " {
+            // If space
+            if stc[i] == " " && previousCharacter == " " {
                 continue
+            } else if self.isPunctuation(stc[i]) == false {
+                cleanedString.append(stc[i])
             }
             
-            if self.isPunctuation(stringToClean2[i]) == false {
-                cleanedString.append(stringToClean2[i])
-                NSLOG("         CleanedString: \(cleanedString)")
-            }
-            
-            previousCharacter = stringToClean2[i]
-            
+            previousCharacter = stc[i]
         }
+        
+        NSLOG("FTChatBot | clean() | Cleaned String: \(cleanedString)")
         
         return cleanedString
     }
@@ -222,21 +235,6 @@ class FTChatBot: NSObject, FTSlackManagerListener {
         }
         
         return false
-    }
-    
-    func trimLeft() -> String {
-        
-        return ""
-    }
-    
-    func trimRight() -> String {
-        
-        return ""
-    }
-    
-    func trimLeftAndRight() -> String {
-        
-        return ""
     }
     
     //====================================
