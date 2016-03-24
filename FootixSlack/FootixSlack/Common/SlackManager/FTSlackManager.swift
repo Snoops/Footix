@@ -106,10 +106,10 @@ class FTSlackManager: NSObject, MessageEventsDelegate, SlackEventsDelegate {
         
         if message.user != self.chatBot?.uniqueID {
         
-//            if message.text!.rangeOfString((self.chatBot?.uniqueID)!) != nil {
+            if message.text!.rangeOfString((self.chatBot?.uniqueID)!) != nil {
                 // Message was destined to ChatBot, so dispatch it to listeners.
                 self.dispatchMessageToListeners(message)
-//            }
+            }
         }
     }
     

@@ -20,19 +20,15 @@ class FTChatBot: NSObject, FTSlackManagerListener {
     
     /** ChatBot name. */
     private(set) var name:String? = nil
-
-    private let defaultUnknownResponse:String = "I'M NOT SURE IF I UNDERSTAND WHAT YOU ARE TALKING ABOUT."
-    
-    private let defaultRepeatQuestionResponse:String = "ARE YOU REALLY MAKING ME REPEAT MYSELF??"
-    
-    private let defaultRepeatAnswerResponse: String = "ARE YOU MOCKING ME?"
     
     /** Temporary test knowledge base. Dictionary of questions/answers. */
     private var knowledgeBase: [String : String] = ["HOW ARE YOU": "I'M GREAT THANK YOU!",
                                                     "WHATS YOUR NAME": "MY NAME IS @FOOTIX",
                                                     "WHAT ARE YOU": "I'M A BOT",
                                                     "ARE YOU INTELLIGENT": "OF COURSE!",
-                                                    "BYE": "IT WAS NICE TALKING TO YOU, SEE YOU NEXT TIME!"]
+                                                    "BYE": "IT WAS NICE TALKING TO YOU, SEE YOU NEXT TIME!",
+                                                    "QUEL EST LE CLASSEMENT DE LA LIGUE 1": "ALLEZ L'OM",
+                                                    "QUEL EST LE CLASSEMENT DE LA LIGUE 2": "ALLEZ L'OM, CHAMPION D'EUROPE"]
     
     /** */
     private var previousInputMessage: Message? = nil
@@ -98,14 +94,19 @@ class FTChatBot: NSObject, FTSlackManagerListener {
         // Clean input message before searching for a response.
         let inputText: String = self.cleanString(message.text!)
         
+        // If the string end up being empty after cleaning, the return default message.
+        if inputText.isEmpty == true {
+            return Message(message: ["text": Constants.ChatBot.defaultEmptyStringResponse, "channel": message.channel!])!
+        }
+        
         // Check that new incoming message is different from previous input message.
         if self.previousInputMessage != nil && inputText == self.previousInputMessage?.text! {
-            return Message(message: ["text": self.defaultRepeatQuestionResponse, "channel": message.channel!])!
+            return Message(message: ["text": Constants.ChatBot.defaultRepeatQuestionResponse, "channel": message.channel!])!
         }
         
         // Check that new incoming message is different from previous output message.
         if self.previousOutputMessage != nil && inputText == self.previousOutputMessage?.text! {
-            return Message(message: ["text": self.defaultRepeatAnswerResponse, "channel": message.channel!])!
+            return Message(message: ["text": Constants.ChatBot.defaultRepeatAnswerResponse, "channel": message.channel!])!
         }
         
         /** Store scores for best approximate match. */
@@ -155,7 +156,7 @@ class FTChatBot: NSObject, FTSlackManagerListener {
         } else { // Else return 'default unknow answer' response.
                 
             // We create a response message with text answer from knowledge base.
-            return Message(message: ["text": self.defaultUnknownResponse, "channel": message.channel!])!
+            return Message(message: ["text": Constants.ChatBot.defaultUnknownResponse, "channel": message.channel!])!
         }
     }
     
@@ -182,8 +183,11 @@ class FTChatBot: NSObject, FTSlackManagerListener {
         
         NSLOG("FTChatBot | clean() | StringToClean: \(stringToClean)")
     
-        // Remove occurences of botID in string.
-        var stc = stringToClean.stringByReplacingOccurrencesOfString("<@U0S558MS7>", withString: "")
+        // Remove occurences of black listed words in string.
+        var stc = stringToClean
+        for string in Constants.ChatBot.blackListedWords {
+            stc = stc.stringByReplacingOccurrencesOfString(string, withString: "")
+        }
 
         var cleanedString: String = ""
         var previousCharacter: String? = nil
@@ -203,6 +207,10 @@ class FTChatBot: NSObject, FTSlackManagerListener {
             previousCharacter = stc[i]
         }
         
+        
+        // *********************************************************
+        // TODO: TO BE IMPROVED
+        // Decided to do another round to eliminate extra spaces.
         stc = cleanedString
         stringLength = stc.characters.count
         cleanedString = ""
@@ -218,6 +226,8 @@ class FTChatBot: NSObject, FTSlackManagerListener {
             
             previousCharacter = stc[i]
         }
+        // *********************************************************
+        
         
         NSLOG("FTChatBot | clean() | Cleaned String: \(cleanedString)")
         

@@ -71,10 +71,10 @@ class FTFuzzySearch {
             return 0
         }
         
-        // stringToSearch is greater than the originalString return false
-        if tempOriginalString.characters.count < tempStringToSearch.characters.count {
-            return 0
-        }
+//        // stringToSearch is greater than the originalString return false
+//        if tempOriginalString.characters.count < tempStringToSearch.characters.count {
+//            return 0
+//        }
         
         // Check isCaseSensitive if true lowercase the contents of both strings
         if !isCaseSensitive {
@@ -126,10 +126,10 @@ class FTFuzzySearch {
             return [String]()
         }
         
-        // stringToSearch is greater than the originalString return false
-        if originalString.characters.count < stringToSearch.characters.count {
-            return [String]()
-        }
+//        // stringToSearch is greater than the originalString return false
+//        if originalString.characters.count < stringToSearch.characters.count {
+//            return [String]()
+//        }
         
         // Check isCaseSensitive if true lowercase the contents of both strings
         if !isCaseSensitive {
